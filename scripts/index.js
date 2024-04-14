@@ -69,6 +69,20 @@ form.addEventListener("submit", async (event) => {
 
             document.body.appendChild(inpcont);
             inpcont.appendChild(inp);
+  var open = document.createElement('img');
+            open.style.cursor="pointer";
+            open.style.position = "absolute";
+            open.style.width = "50px";
+            open.style.height = "50px";
+            open.src = "/img/ab.png";
+            open.style.zIndex = "1001";
+            open.style.right = "65px";
+            open.style.top = "1%";
+            open.onclick = function() {
+                if (document.getElementById("iframe").contentWindow.location.href!="about:blank"){
+                    window.open(document.getElementById("iframe").contentWindow.location.href);
+                }
+            };
   
             var dev = document.createElement('img');
             dev.style.cursor="pointer";
