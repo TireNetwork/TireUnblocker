@@ -12,18 +12,19 @@
     z-index: 1;
 }
         .sidebar {
-            list-style-type: none;
-            margin: 0;
-            padding: 0;
-            width: 250px; /* Adjust the width of the sidebar */
-            height: 100%; /* Full height */
-            position: fixed;
-            top: 0;
-            left: -250px; /* Initially off-screen */
-            background-color: black;
-            box-shadow: 0 6px 2px -2px white;
-            transition: left 0.5s ease; /* Smooth animation for opening/closing */
-        }
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    width: 250px; /* Adjust the width of the sidebar */
+    height: 100%; /* Full height */
+    position: fixed;
+    top: 0;
+    left: -250px; /* Initially off-screen */
+    background-color: black;
+    box-shadow: 0 6px 2px -2px white;
+    transition: left 0.5s ease; /* Smooth animation for opening/closing */
+    z-index: 2; /* Ensure the sidebar overlaps other content */
+}
 
         .nav-item {
             cursor: pointer !important;
