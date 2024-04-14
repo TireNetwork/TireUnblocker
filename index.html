@@ -1,169 +1,35 @@
-
-<script src="/uv/uv.bundle.js" defer></script>
-<script src="/uv/uv.config.js" defer></script>
-<script src="/register-sw.js" defer></script>
-<script src="/search.js" defer></script>
-<script src="/scripts/index.js" defer></script>
-<script src="/error.js" defer></script>
-
-<script>
-function get_cookie(cookie_name) { const value = "; " + document.cookie; const parts = value.split("; " + cookie_name + "="); if (parts.length === 2) return parts.pop().split(";").shift(); } 
-    function blank(){
-      (function () {var url = document.URL; var urlObj = new window.URL(window.location.href); win = window.open(); win.document.body.style.margin = "0"; win.document.body.style.height = "100vh"; var iframe = win.document.createElement("iframe"); iframe.style.border = "none"; iframe.style.width = "100%"; iframe.style.height = "100%"; iframe.style.margin = "0"; iframe.referrerpolicy = "no-referrer"; iframe.allow = "fullscreen"; iframe.src = url.toString(); win.document.body.appendChild(iframe);window.location.href="https://google.com";})();
-    }
-</script>
-<div class="title">
-    <h1 id="title1">TireUnblocker</h1>
-</div>
-<title>Tire-UB</title>
-
-<form class="searchbox" id="searchbox">
-    <input id="searchengine" value="" type="hidden"/>
-    <input class="search" id="search" placeholder='type here' type='text'/>
-</form>
 <style>
-    @import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,300;0,400;0,500;1,300;1,400&display=swap");
-    .iframe1{
-    border: none;
-    }
-    .searchbox{
-    width:47%;
-    height:7%;
-    color: #FFFFFF;
-    position: absolute;
-    left:26.5%;
-    top:50%;
-    }
-    .search{
-    text-align: center;
-    border-radius: 18px;
-    outline:none;
-    border-radius: 18px;
-    background:transparent;
-    border: 2px solid #FFFFFF;
-    color: #FFFFFF;
-    width:100%;
-    height:100%;
-    }
-  
-  
-.title {
-    position: absolute;
-    width: 100%;
-    height: 100px;
-    top: 19%;
-    left: 50%; /* Adjust left position if needed */
-    transform: translateX(-50%);
-    text-align: center;
-    color: grey; /* Change color as needed */
-    font-family: sans-serif;
-    font-size: 80px; /* Adjust font size as needed */
-}
-    ::placeholder {
-    margin: auto;
-    color: #FFFFFF;
-    font-size: 1.2em;
-    }
-    html {
-    background-color: black;
-    }
-     .x{
-    position: absolute;
-    width:70px;
-    height:70px;
-    top:0px;
-    right:0px;
-    }
-</style>
-<script>
-  }
-    
-    if (get_cookie("autoblank")=="on"){
-        if (window.top !== window) {
-            var title2=get_cookie("title2");
+        body {
+            overflow: hidden; /* Prevent scrolling when sidebar is open */
         }
-        else{
-            blank();
-        }
-    }
-    
-    var title2=get_cookie("title2");
-    
-    
-    var fontsize1=2560/screen.width*18.5;
-    var fontsize2=2560/screen.width*7.5;
-    
-    title1.style.fontSize = fontsize1+"px";
-    search.style.fontSize = fontsize2+"px"; 
-</script>
-<script>
-    window.navigator.serviceWorker.register('./sw.js');
-    
-    var title2=get_cookie("title2");
-    var browsertype=get_cookie("browser3");
-    var favicon=get_cookie("favicon");
-    
-    var fontsize1=2560/screen.width*18;
-    var fontsize2=2560/screen.width*7.5;
-    
-    title1.style.fontSize = fontsize1+"px";
-    search.style.fontSize = fontsize2+"px";
 
-    if (browsertype==null || browsertype==undefined || browsertype==""){
-        browsertype="google";
-        searchengine.value="https://www.google.com/search?q=";
-        document.cookie="browser3="+browsertype+"; expires=Thu, 18 Dec 9013 12:00:00 UTC; path=/";
-    }
-    else{
-        if (browsertype=="google"){
-            searchengine.value="https://www.google.com/search?q=%s";
+        #container {
+            position: relative;
+            width: 100%;
+            height: 100%;
+            background-color: transparent; /* Set initial background color */
+            transition: background-color 0.5s ease; /* Smooth transition for background color change */
         }
-        if (browsertype=="bing"){
-            searchengine.value="https://www.bing.com/search?q=%s";
-        }
-        if (browsertype=="yahoo"){
-            searchengine.value="https://search.yahoo.com/search?p=%s";
-        }
-        document.cookie="browser3="+browsertype+"; expires=Thu, 18 Dec 9013 12:00:00 UTC; path=/";
-    } 
-</script>
 
-<script>
-function isUrl(val = '') {
-        if (/^http(s?):\/\//.test(val) || val.includes('.') && val.substr(0, 1) !== ' ') return true;
-        return false;
-    };
-    
-   document.addEventListener("DOMContentLoaded", function() {
-  var searchEngine = document.getElementById("searchengine").value;
-  var searchInput = document.getElementById("search").value;
-       
-  searchInput.value = searchEngine || "https://www.google.com/search?q=%s";
-})}
-</script>
-<style>
-
-        
-        ul.navbar {
+        .sidebar {
             list-style-type: none;
             margin: 0;
-        z-index:2;
             padding: 0;
-            overflow: hidden;
+            width: 250px; /* Adjust the width of the sidebar */
+            height: 100%; /* Full height */
+            position: fixed;
+            top: 0;
+            left: -250px; /* Initially off-screen */
             background-color: black;
-          position:absolute;
-                box-shadow: 0 6px 2px -2px white;
-          width:100%;
-          top:0px;
-          left:0px;
+            box-shadow: 0 6px 2px -2px white;
+            transition: left 0.5s ease; /* Smooth animation for opening/closing */
         }
 
-        li.nav-item {
-            float: left;
+        .nav-item {
             cursor: pointer !important;
         }
 
-        li.nav-item a {
+        .nav-item a {
             display: block;
             color: white;
             transition: all 1s;
@@ -173,57 +39,85 @@ function isUrl(val = '') {
             font-family: sans-serif;
         }
 
-        li.nav-item a:hover {
-            background-color: black;
-        }
-
-        li.nav-item2 {
-            float: right;
-            cursor: pointer !important;
-        }
-
-        li.nav-item2 a {
-            display: block;
-            color: white;
-            transition: all 1s;
-            text-align: center;
-            padding: 14px 16px;
-            text-decoration: none;
-        }
-
-        li.nav-item2 a:hover {
+        .nav-item a:hover {
             background-color: #444;
-        }  #frame{
-        border:0px solid black;
-        position:absolute;
-        width:100%;
-        z-index:1;
-        height:100%;
-        bottom:0px;
-        left:0px;
-      }
-    #fsbutton{
-      display:block;
-      position:absolute;
-      background-color:#333;
-      width:100px;
-      cursor: pointer !important;
-      z-index:3;
-      text-align:center;
-      border-radius:25px;
-      border:2px solid white;
-      box-shadow: 0 6px 2px -2px white;
-      color:white;
-    }
+        }
+
+        #frame {
+            border: 0px solid black;
+            position: absolute;
+            width: calc(100% - 250px); /* Adjust width to accommodate sidebar */
+            z-index: 1;
+            height: 100%;
+            top: 0;
+            left: 250px; /* Initial position shifted to accommodate sidebar */
+            transition: filter 0.5s ease; /* Smooth animation for blur effect */
+        }
+
+        #fsbutton {
+            position: absolute;
+            background-color: #333;
+            width: 40px; /* Adjust button size */
+            height: 40px; /* Adjust button size */
+            cursor: pointer !important;
+            z-index: 3;
+            top: 10px; /* Adjust top position as needed */
+            left: 10px; /* Adjust left position as needed */
+            border-radius: 50%; /* Make it circular */
+            border: 2px solid white;
+            box-shadow: 0 6px 2px -2px white;
+            color: white;
+        }
+
+        /* Transparent black fade effect when sidebar is open */
+        .blurred {
+            filter: brightness(70%) blur(5px); /* Adjust brightness and blur intensity */
+        }
+
+        /* Transparent black background when sidebar is open */
+        #container.sidebar-open {
+            background-color: rgba(0, 0, 0, 0.8); /* Adjust transparency */
+        }
     </style>
-</head>
-<body>
-<ul class="navbar">
-    <li class="nav-item"><a onclick="home();">Home</a></li>
-    <li class="nav-item"><a onclick="games();">Games</a></li>
-    <script> function home(){
-    frame.src="/home.html";
-  }
-  function games(){
-    frame.src="/gms";
-  }</script>
+<div id="container">
+    <ul class="sidebar" id="sidebar">
+        <li class="nav-item"><a onclick="home();">Home</a></li>
+        <li class="nav-item"><a onclick="games();">Games</a></li>
+        <script>
+            function home() {
+                frame.src = "/home.html";
+            }
+
+            function games() {
+                frame.src = "/gms";
+            }
+        </script>
+    </ul>
+    <button id="fsbutton" onclick="toggleSidebar()">☰</button>
+    <iframe id="frame"></iframe>
+</div>
+
+<script>
+    function toggleSidebar() {
+        var container = document.getElementById('container');
+        var sidebar = document.getElementById('sidebar');
+        var frame = document.getElementById('frame');
+        var button = document.getElementById('fsbutton');
+        if (sidebar.style.left === '-250px') {
+            sidebar.style.left = '0'; // Open sidebar
+            frame.style.width = 'calc(100% - 250px)'; // Adjust frame width
+            frame.style.left = '250px'; // Shift frame to accommodate sidebar
+            frame.classList.add('blurred'); // Apply blur effect
+            container.classList.add('sidebar-open'); // Apply transparent black background
+            button.innerHTML = '✕'; // Change button icon
+        } else {
+            sidebar.style.left = '-250px'; // Close sidebar
+            frame.style.width = '100%'; // Reset frame width
+            frame.style.left = '0'; // Reset frame position
+            frame.classList.remove('blurred'); // Remove blur effect
+            container.classList.remove('sidebar-open'); // Remove transparent black background
+            button.innerHTML = '☰'; // Change button icon back
+        }
+    }
+</script>
+
