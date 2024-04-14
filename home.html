@@ -9,16 +9,11 @@ function get_cookie(cookie_name) { const value = "; " + document.cookie; const p
 </div>
 <title>Tire-UB</title>
 
-<form id="uv-form"">
-            <input id="uv-search-engine" value="https://www.google.com/search?q=%s" type="hidden"/> 
-            <input id="uv-address" type="text" placeholder="Search Google or type an URL" class="form__input"/>
-          </form>
-          <div class="desc left-margin">
-            <p id="uv-error"></p>
-            <pre id="uv-error-code"></pre>
-          </div>
-         
-      </div>
+ <form id="uv-form"">
+            <input id="uv-search-engine" class="searchbox" id="searchbox value="https://www.google.com/search?q=%s" type="hidden"/> 
+            <input id="uv-address"  class="search" id="search" type="text" placeholder="Search Google or type an URL" class="form__input"/>
+          </form
+
       <script src="uv/uv.bundle.js" defer></script>
       <script src="uv/uv.config.js" defer></script>
       <script src="register-sw.js" defer></script>
@@ -34,6 +29,26 @@ function get_cookie(cookie_name) { const value = "; " + document.cookie; const p
   text-align: center;
   margin: 20px auto;
 }
+    .searchbox{
+    width:47%;
+    height:7%;
+    color: #FFFFFF;
+    position: absolute;
+    left:26.5%;
+    top:50%;
+    }
+    
+    .search{
+    text-align: center;
+    border-radius: 18px;
+    outline:none;
+    border-radius: 18px;
+    background:transparent;
+    border: 2px solid #FFFFFF;
+    color: #FFFFFF;
+    width:100%;
+    height:100%;
+    }
   
   
 .title {
