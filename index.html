@@ -76,28 +76,46 @@
     </style>
 <div id="container">
    <div id="container">
-    <ul class="sidebar" id="sidebar">
-        <li class="nav-item"><a onclick="home();">Home</a></li>
-        <li class="nav-item"><a onclick="games();">Games</a></li>
-        <li class="nav-item"><a onclick="ab();">about:blank</a></li>
-          </li>
-    </ul>
-</div> <script>
-            function home() {
-                frame.src = "/home.html";
-            }
-
-            function games() {
-                frame.src = "/gms";
-            }
-    function ab() {
-                frame.src = "ab.html";
-            }
-        </script>
-    </ul>
+   <div id="container">
+    <div id="container">
+        <ul class="sidebar" id="sidebar">
+            <li class="nav-item"><a onclick="home();">Home</a></li>
+            <li class="nav-item"><a onclick="games();">Games</a></li>
+            <li class="nav-item"><a onclick="ab();">about:blank</a></li>
+        </ul>
+    </div>
     <button id="fsbutton" onclick="toggleSidebar()">☰</button>
- <iframe  id="frame" src="home.html" style="position: absolute; top: 0; left: 0; width: 100vw; height: 100vh; border: none; overflow: hidden;"></iframe>
+    <iframe id="frame" src="home.html" style="position: absolute; top: 0; left: 0; width: 100vw; height: 100vh; border: none; overflow: hidden;"></iframe>
 </div>
+<script>
+    var frame = document.getElementById('frame');
+
+    function home() {
+        frame.src = "/home.html";
+    }
+
+    function games() {
+        frame.src = "/gms";
+    }
+
+    function ab() {
+        var win = window.open('about:blank');
+        var url = "index.html";
+        var iframe = win.document.createElement('iframe');
+        iframe.style.width = "100%";
+        iframe.style.height = "100%";
+        iframe.style.border = "none";
+        iframe.src = url;
+        win.document.body.appendChild(iframe);
+    }
+
+    function toggleSidebar() {
+        var sidebar = document.getElementById('sidebar');
+        sidebar.classList.toggle('active');
+    }
+</script>
+    </ul>
+  </div>
 
 <script>
     function toggleSidebar() {
