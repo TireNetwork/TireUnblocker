@@ -79,9 +79,8 @@
     <ul class="sidebar" id="sidebar">
         <li class="nav-item"><a onclick="home();">Home</a></li>
         <li class="nav-item"><a onclick="games();">Games</a></li>
-        <li class="nav-item">
-            <p style="float: left; font-family: 'Oxygen', sans-serif; cursor: pointer; padding: 20px;" onclick="var url = window.location.href; var win = window.open(); win.document.body.style.margin = '0'; win.document.body.style.height = '100vh'; var embed = win.document.createElement('iframe'); embed.style.border = 'none'; embed.style.width = '100%'; embed.style.height = '100%'; embed.style.margin = '0'; embed.src = url; win.document.body.appendChild(embed);">Open About Blank Cloaking</p>
-        </li>
+        <li class="nav-item"><a onclick="ab();">about:blank</a></li>
+          </li>
     </ul>
 </div> <script>
             function home() {
@@ -90,6 +89,9 @@
 
             function games() {
                 frame.src = "/gms";
+            }
+    function ab() {
+                frame.src = "ab.html";
             }
         </script>
     </ul>
