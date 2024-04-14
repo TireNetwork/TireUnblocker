@@ -141,3 +141,89 @@ function isUrl(val = '') {
   searchInput.value = searchEngine || "https://www.google.com/search?q=%s";
 })}
 </script>
+<style>
+
+        
+        ul.navbar {
+            list-style-type: none;
+            margin: 0;
+        z-index:2;
+            padding: 0;
+            overflow: hidden;
+            background-color: black;
+          position:absolute;
+                box-shadow: 0 6px 2px -2px white;
+          width:100%;
+          top:0px;
+          left:0px;
+        }
+
+        li.nav-item {
+            float: left;
+            cursor: pointer !important;
+        }
+
+        li.nav-item a {
+            display: block;
+            color: white;
+            transition: all 1s;
+            text-align: center;
+            padding: 14px 16px;
+            text-decoration: none;
+            font-family: sans-serif;
+        }
+
+        li.nav-item a:hover {
+            background-color: black;
+        }
+
+        li.nav-item2 {
+            float: right;
+            cursor: pointer !important;
+        }
+
+        li.nav-item2 a {
+            display: block;
+            color: white;
+            transition: all 1s;
+            text-align: center;
+            padding: 14px 16px;
+            text-decoration: none;
+        }
+
+        li.nav-item2 a:hover {
+            background-color: #444;
+        }  #frame{
+        border:0px solid black;
+        position:absolute;
+        width:100%;
+        z-index:1;
+        height:100%;
+        bottom:0px;
+        left:0px;
+      }
+    #fsbutton{
+      display:block;
+      position:absolute;
+      background-color:#333;
+      width:100px;
+      cursor: pointer !important;
+      z-index:3;
+      text-align:center;
+      border-radius:25px;
+      border:2px solid white;
+      box-shadow: 0 6px 2px -2px white;
+      color:white;
+    }
+    </style>
+</head>
+<body>
+<ul class="navbar">
+    <li class="nav-item"><a onclick="home();">Home</a></li>
+    <li class="nav-item"><a onclick="games();">Games</a></li>
+    <script> function home(){
+    frame.src="/home.html";
+  }
+  function games(){
+    frame.src="/gms";
+  }</script>
