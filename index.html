@@ -1,12 +1,19 @@
 <style>
-          #container {
-            position: relative;
-            width: 100%;
-            height: 100%;
-            background-color: transparent; /* Set initial background color */
-            transition: background-color 0.5s ease; /* Smooth transition for background color change */
-        }
+#container {
+    position: relative;
+    width: 100%;
+    height: 100%; /* Set the height of the container to fill the entire page */
+    background-color: transparent; /* Set initial background color */
+    transition: background-color 0.5s ease; /* Smooth transition for background color change */
+}
 
+#frame {
+    border: 0px solid black;
+    position: absolute;
+    width: 100%;
+    z-index: 1;
+    height: 100%;
+}
         .sidebar {
             list-style-type: none;
             margin: 0;
@@ -38,13 +45,7 @@
         .nav-item a:hover {
             background-color: #444;
         }
-#frame {
-    border: 0px solid black;
-    position: absolute;
-    width: 100%; /* Set width to 100% */
-    z-index: 1;
-    height: 100%; /* Set height to 100% */
-}
+
         
         #fsbutton {
             position: absolute;
