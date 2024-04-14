@@ -100,6 +100,12 @@
 
     function ab() {
         var win = window.open('about:blank');
+        win.document.title = "Classes";
+        var favicon = win.document.createElement('link');
+        favicon.rel = 'icon';
+        favicon.type = 'image/webp';
+        favicon.href = 'class.webp';
+        win.document.head.appendChild(favicon);
         var url = "index.html";
         var iframe = win.document.createElement('iframe');
         iframe.style.width = "100%";
