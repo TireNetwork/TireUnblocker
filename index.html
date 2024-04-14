@@ -97,6 +97,7 @@
             sidebar.style.left = '0'; // Open sidebar
             frame.style.width = 'calc(100% - 250px)'; // Adjust frame width
             frame.style.left = '250px'; // Shift frame to accommodate sidebar
+            frame.style.height = '100vh'; // Set frame height to fill the entire viewport
             frame.classList.add('blurred'); // Apply blur effect
             container.classList.add('sidebar-open'); // Apply transparent black background
             button.innerHTML = '✕'; // Change button icon
@@ -104,10 +105,10 @@
             sidebar.style.left = '-250px'; // Close sidebar
             frame.style.width = '100%'; // Reset frame width
             frame.style.left = '0'; // Reset frame position
+            frame.style.height = '100vh'; // Reset frame height to fill the entire viewport
             frame.classList.remove('blurred'); // Remove blur effect
             container.classList.remove('sidebar-open'); // Remove transparent black background
             button.innerHTML = '☰'; // Change button icon back
         }
     }
 </script>
-
