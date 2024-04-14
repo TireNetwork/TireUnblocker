@@ -71,65 +71,7 @@ function get_cookie(cookie_name) { const value = "; " + document.cookie; const p
         if (window.top !== window) {
             var title2=get_cookie("title2");
         }
-        else{
-            blank();
-        }
-    }
     
-    var title2=get_cookie("title2");
-    
-    
-    var fontsize1=2560/screen.width*18.5;
-    var fontsize2=2560/screen.width*7.5;
-    
-    title1.style.fontSize = fontsize1+"px";
-    search.style.fontSize = fontsize2+"px"; 
-</script>
-<script>
-    window.navigator.serviceWorker.register('./sw.js');
-    
-    var title2=get_cookie("title2");
-    var browsertype=get_cookie("browser3");
-    var favicon=get_cookie("favicon");
-    
-    var fontsize1=2560/screen.width*18;
-    var fontsize2=2560/screen.width*7.5;
-    
-    title1.style.fontSize = fontsize1+"px";
-    search.style.fontSize = fontsize2+"px";
-
-    if (browsertype==null || browsertype==undefined || browsertype==""){
-        browsertype="google";
-        searchengine.value="https://www.google.com/search?q=";
-        document.cookie="browser3="+browsertype+"; expires=Thu, 18 Dec 9013 12:00:00 UTC; path=/";
-    }
-    else{
-        if (browsertype=="google"){
-            searchengine.value="https://www.google.com/search?q=%s";
-        }
-        if (browsertype=="bing"){
-            searchengine.value="https://www.bing.com/search?q=%s";
-        }
-        if (browsertype=="yahoo"){
-            searchengine.value="https://search.yahoo.com/search?p=%s";
-        }
-        document.cookie="browser3="+browsertype+"; expires=Thu, 18 Dec 9013 12:00:00 UTC; path=/";
-    } 
-</script>
-
-<script>
-function isUrl(val = '') {
-        if (/^http(s?):\/\//.test(val) || val.includes('.') && val.substr(0, 1) !== ' ') return true;
-        return false;
-    };
-    
-   document.addEventListener("DOMContentLoaded", function() {
-  var searchEngine = document.getElementById("searchengine").value;
-  var searchInput = document.getElementById("search").value;
-       
-  searchInput.value = searchEngine || "https://www.google.com/search?q=%s";
-})}
-</script>
 <div id="container"></div>
 <script src="https://cdn.jsdelivr.net/npm/three@0.128.0/build/three.min.js"></script>
 <script>
