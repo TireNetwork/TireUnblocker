@@ -9,9 +9,7 @@
 
 #frame {
     border: 0px solid black;
-    width: 100vw; /* Set width to 100% of the viewport width */
     z-index: 1;
-    height: 100vh; /* Set height to 100% of the viewport height */
 }
         .sidebar {
             list-style-type: none;
@@ -86,7 +84,7 @@
         </script>
     </ul>
     <button id="fsbutton" onclick="toggleSidebar()">☰</button>
-    <iframe id="frame" src="home.html"></iframe>
+ <iframe  id="frame" src="home.html" style="position: absolute; top: 0; left: 0; width: 100vw; height: 100vh; border: none; overflow: hidden;"></iframe>
 </div>
 
 <script>
