@@ -47,7 +47,7 @@ body {
     color: #FFFFFF;
     position: absolute;
     left:26.5%;
-    top:50%;
+   bottom: 0px;
 }
 
 .form__input {
