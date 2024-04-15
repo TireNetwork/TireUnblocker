@@ -1,10 +1,32 @@
 
+      <script src="uv/uv.bundle.js" defer></script>
+      <script src="uv/uv.config.js" defer></script>
+      <script src="register-sw.js" defer></script>
+      <script src="search.js" defer></script>
+      <script src="index.js" defer></script>
+      <script src="error.js" defer></script>
+<script>
+function get_cookie(cookie_name) { const value = "; " + document.cookie; const parts = value.split("; " + cookie_name + "="); if (parts.length === 2) return parts.pop().split(";").shift(); } 
+    function blank(){
+      (function () {var url = document.URL; var urlObj = new window.URL(window.location.href); win = window.open(); win.document.body.style.margin = "0"; win.document.body.style.height = "100vh"; var iframe = win.document.createElement("iframe"); iframe.style.border = "none"; iframe.style.width = "100%"; iframe.style.height = "100%"; iframe.style.margin = "0"; iframe.referrerpolicy = "no-referrer"; iframe.allow = "fullscreen"; iframe.src = url.toString(); win.document.body.appendChild(iframe);window.location.href="https://google.com";})();
+    }
+</script>
+   <style>
+        h1 {
+            text-align: center;
+            position: relative;
+            top: 120px;
+            color: grey; 
+            font-family: Arial, sans-serif; /* Arial font */
+             font-size: 70px; /* Adjust font size as needed */ f
+        }
+    </style>
+    <h1>TireUnblocker</h1>
+<title>Tire-UB</title>
+
       <meta name="viewport" content="width=device-width, initial-scale=1">
       <script src="https://code.jquery.com/jquery-1.10.2.js"></script>
       <link rel="stylesheet" href="index.css">
-      <script type="text/javascript" src="//counter.websiteout.net/js/7/10/5/0"></script>
-      <link rel="shortcut icon" type="image/jpg" href="~/favicon.ico"/>
-      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
       
       <div id="content">
          <form id="uv-form"">
@@ -22,4 +44,113 @@
       <script src="search.js" defer></script>
       <script src="index.js" defer></script>
       <script src="error.js" defer></script>
-   
+
+<style>
+    @import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,300;0,400;0,500;1,300;1,400&display=swap");
+    .iframe1{
+    border: none;
+    }
+
+    ::placeholder {
+    margin: auto;
+    color: #FFFFFF;
+    font-size: 1.2em;
+    }
+    html {
+    background-color: black;
+    }
+     .x{
+    position: absolute;
+    width:70px;
+    height:70px;
+    top:0px;
+    right:0px;
+    }
+</style>
+<script>
+  }
+    
+    if (get_cookie("autoblank")=="on"){
+        if (window.top !== window) {
+            var title2=get_cookie("title2");
+        }
+    
+<div id="container"></div>
+<script src="https://cdn.jsdelivr.net/npm/three@0.128.0/build/three.min.js"></script>
+<script>
+    var scene, camera, renderer;
+
+    function init() {
+        scene = new THREE.Scene();
+        camera = new THREE.PerspectiveCamera(75, window.innerWidth / window.innerHeight, 0.1, 1000);
+        camera.position.z = 50;
+
+        renderer = new THREE.WebGLRenderer({ antialias: true });
+        renderer.setSize(window.innerWidth, window.innerHeight);
+        document.body.appendChild(renderer.domElement); // Append to the body directly
+
+        let particles = createParticles();
+        scene.add(particles);
+
+        window.addEventListener('resize', onWindowResize, false);
+
+        animate();
+    }
+
+    function createParticles() {
+        var particleGeometry = new THREE.BufferGeometry();
+        var count = 1500;
+        var positions = new Float32Array(count * 3);
+        var colors = new Float32Array(count * 3);
+
+        for (var i = 0; i < count * 3; i++) {
+            positions[i] = (Math.random() * 100 - 50);
+            colors[i] = 0.5; // Set the color to grey
+        }
+
+        particleGeometry.setAttribute('position', new THREE.BufferAttribute(positions, 3));
+        particleGeometry.setAttribute('color', new THREE.BufferAttribute(colors, 3));
+
+        var particleMaterial = new THREE.PointsMaterial({
+            size: 0.5,
+            vertexColors: THREE.VertexColors,
+            sizeAttenuation: true, // Allow particles to be affected by distance
+            alphaTest: 0.5, // Set the threshold for alpha map
+            transparent: true // Enable transparency
+        });
+
+        return new THREE.Points(particleGeometry, particleMaterial);
+    }
+
+    function animate() {
+        requestAnimationFrame(animate);
+
+        // Rotate the scene
+        scene.rotation.y += 0.01;
+
+        renderer.render(scene, camera);
+    }
+
+    function onWindowResize() {
+        camera.aspect = window.innerWidth / window.innerHeight;
+        camera.updateProjectionMatrix();
+        renderer.setSize(window.innerWidth, window.innerHeight);
+    }
+
+    init();
+</script>
+<style>
+    body, html {
+        height: 100%;
+        margin: 0;
+        overflow: hidden;
+    }
+    #container {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        z-index: -1;
+    }
+</style>
