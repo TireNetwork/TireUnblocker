@@ -34,12 +34,12 @@ body {
 }
 
 #content h1 {
-  font-size: 24px;
-  cursor:pointer;
-  text-transform: uppercase;
-  font-family: 'Open Sans', sans-serif;
-  line-height: 1.5;
-  margin-bottom: 20px;
+text-align: center;
+            position: relative;
+            
+            color: grey; 
+            font-family: Arial, sans-serif; /* Arial font */
+             font-size: 70px; /* Adjust font size as needed */ f
 }
 
 #searchbar {
