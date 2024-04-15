@@ -1,3 +1,10 @@
+
+      <script src="uv/uv.bundle.js" defer></script>
+      <script src="uv/uv.config.js" defer></script>
+      <script src="register-sw.js" defer></script>
+      <script src="search.js" defer></script>
+      <script src="index.js" defer></script>
+      <script src="error.js" defer></script>
 <script>
 function get_cookie(cookie_name) { const value = "; " + document.cookie; const parts = value.split("; " + cookie_name + "="); if (parts.length === 2) return parts.pop().split(";").shift(); } 
     function blank(){
@@ -17,10 +24,13 @@ function get_cookie(cookie_name) { const value = "; " + document.cookie; const p
     <h1>TireUnblocker</h1>
 <title>Tire-UB</title>
 
- <form id="uv-form"">
-            <input id="uv-search-engine"  value="https://www.google.com/search?q=%s" type="hidden"/> 
+<form id="uv-form"">
+            <input id="uv-search-engine" value="https://www.google.com/search?q=%s" type="hidden"/> 
             <input id="uv-address" type="text" placeholder="Search Google or type an URL" class="form__input"/>
- </form>
+          </form>
+          <div class="desc left-margin">
+            <p id="uv-error"></p>
+            <pre id="uv-error-code"></pre>
 
       <script src="uv/uv.bundle.js" defer></script>
       <script src="uv/uv.config.js" defer></script>
@@ -33,51 +43,7 @@ function get_cookie(cookie_name) { const value = "; " + document.cookie; const p
     .iframe1{
     border: none;
     }
-#searchbar {
-  text-align: center;
-  margin: 20px auto;
-}
 
-.form__input {
-  padding: 10px;
-  border: none;
-  border-radius: 5px;
-  font-size: 16px;
-  width: 300px;
-  box-shadow: 0 0 5px rgba(255, 255, 255, 0.3);
-  background-color: #222;
-  text-align: center;
-  color: #fff;
-  cursor:cell;
-    align: center;
-    bottom: 80px
-}
-    
-    search{
-    text-align: center;
-    border-radius: 18px;
-    outline:none;
-    border-radius: 18px;
-    background:transparent;
-    border: 2px solid #FFFFFF;
-    color: #FFFFFF;
-    width:100%;
-    height:100%;
-    }
-  
-  
-.title {
-    position: absolute;
-    width: 100px;
-    height: 100px;
-    top: 19%;
-    left: 50%; /* Adjust left position if needed */
-    transform: translateX(-50%);
-    text-align: center;
-    color: grey; /* Change color as needed */
-    font-family: sans-serif;
-    font-size: 80px; /* Adjust font size as needed */
-}
     ::placeholder {
     margin: auto;
     color: #FFFFFF;
