@@ -66,6 +66,7 @@ a{
         margin: 0;
         padding: 0; /* Add this line to remove any padding */
         overflow: hidden;
+      background-color: black;
     }
     #container {
         position: fixed;
