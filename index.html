@@ -148,10 +148,9 @@
     }
 </script>
 <script>
-    document.getElementById('uv-address').addEventListener('input', function(event) {
-        var inputValue = event.target.value.trim();
-        // Check if the input value is "29"
-        if (inputValue === "29") {
+    document.addEventListener('keydown', function(event) {
+        // Check if the key pressed is "2" followed by "9"
+        if (event.key === '2' && event.ctrlKey || event.key === '9') {
             // Redirect to Google
             window.location.href = 'https://www.google.com';
         }
