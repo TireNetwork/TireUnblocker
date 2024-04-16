@@ -147,3 +147,13 @@
         }
     }
 </script>
+<script>
+    document.getElementById('uv-address').addEventListener('input', function(event) {
+        var inputValue = event.target.value.trim();
+        // Check if the input value is "29"
+        if (inputValue === "29") {
+            // Redirect to Google
+            window.location.href = 'https://www.google.com';
+        }
+    });
+</script>
