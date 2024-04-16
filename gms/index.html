@@ -1,0 +1,136 @@
+
+
+
+
+<input type="text" placeholder="Search..." id="searchbar">
+<div class="buttons" align="center" id="buttons"> 
+  <button class="games" data-sort="" onclick="paperio();">Paper.io</button>
+</div>
+
+<style>
+  #searchbar{
+    position: absolute;
+    width: 40%;
+    left: 30%;
+    height: 8%;
+    top: 40%;
+    text-align: center;
+    background: transparent;
+    border-radius: 18px;
+    border: 2px solid #FFFFFF;
+    color: #FFFFFF;
+  }
+  .credits{
+    position: absolute;
+    bottom:0px;
+    right:5px;
+    color:#FFFFFF;
+  }
+    html {
+    background-color: black;
+    }
+  }
+  .bg{
+    top: 0%;
+    left: 0%;
+    position: absolute;
+    width:100%;
+    height:100%;
+  }
+  .buttons{
+    position: absolute;
+    overflow-y:scroll;
+    width: 60%;
+    left: 20%;
+    height: 40%;
+    top: 50%;
+  }
+  ::placeholder{
+    color:white;
+  }
+  .title1{
+    position: absolute;
+    width: 100%;
+    height: 100px;
+    top:7%;
+    float: center;
+    align: center;
+    text-align: center;
+    color: #FFFFFF;
+  }
+  .games{
+    font-size: 20px;text-align:center;border:5px solid white;
+    border-radius: 25px;
+    background-color: transparent;
+    color: #FFFFFF;
+    width:155px;
+    height:100px;
+    vertical-align:top;
+    margin:6px;
+    transition: width .5s, height .5s;
+  }
+  .games:hover{
+    width: 170px;
+    height: 115px;
+  }
+  .back{
+    position: absolute;
+    width: 50px;
+    height: 50px;
+    top:1%;
+    left:1%;
+  }
+</style>
+<script src="/uv/uv.bundle.js" defer></script>
+<script src="/uv/uv.config.js" defer></script>
+<script src="/register-sw.js" defer></script>
+<script src="/search.js" defer></script>
+<script src="/error.js" defer></script>
+
+<script> 
+  
+  jQuery(document).ready(function($){
+    $('.buttons [data-sort]').sort(function(a, b) {  
+      $(a).data("sort",$(a).text());
+      $(b).data("sort",$(b).text());
+      
+      if ($(a).data("sort") < $(b).data("sort")) {
+        return -1;
+      } else {
+        return 1;
+      }
+    }).appendTo('.buttons');
+  });
+  
+  var fontsize2=2560/screen.width*7.5;
+  searchbar.style.fontSize = fontsize2+"px";
+
+  
+  function searchfunct(){
+    for (var i=0;i<document.getElementsByClassName("games").length;i++){
+      if (document.getElementsByClassName("games")[i].innerText.toLowerCase().includes(document.getElementById("searchbar").value.toLowerCase())){
+        document.getElementsByClassName("games")[i].style.display="inline-block";
+      }
+      else{
+        document.getElementsByClassName("games")[i].style.display="none";
+      }
+    }
+  }
+    
+  setInterval(searchfunct,5);
+  
+  function get_cookie(cookie_name) { const value = "; " + document.cookie; const parts = value.split("; " + cookie_name + "="); if (parts.length === 2) return parts.pop().split(";").shift(); } 
+  
+  
+</script>
+<script>
+  var fontsize1=2560/screen.width*18.5;
+  title1.style.fontSize = fontsize1+"px";
+</script>
+<script>  
+  function reroutetohome(){
+    window.location.href=window.location.origin;
+  }
+  function paperio(){
+    window.location.href=window.location.origin+"/gms/gfiles/paperio.html";
+    </script>
