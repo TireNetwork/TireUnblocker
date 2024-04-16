@@ -61,3 +61,17 @@ a{
   outline: none;
   box-shadow: 0 0 5px rgba(255, 255, 255, 0.5);
 }
+    body, html {
+        height: 100%;
+        margin: 0;
+        padding: 0; /* Add this line to remove any padding */
+        overflow: hidden;
+    }
+    #container {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        z-index: -1;
+    }
