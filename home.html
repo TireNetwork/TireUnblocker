@@ -64,6 +64,24 @@ h1 {
 </div>
 
 <script>
+    // Focus on the input field when the page loads
+    window.onload = function() {
+        document.getElementById('uv-address').focus();
+    };
+
+    document.getElementById('uv-address').addEventListener('input', function(event) {
+        var inputValue = event.target.value.trim();
+        // Check if the input value is "29"
+        if (inputValue === "29") {
+            // Redirect to Google
+            window.location.href = 'https://www.google.com';
+            // Clear the input field after redirection
+            event.target.value = '';
+        }
+    });
+</script>
+
+<script>
     if (get_cookie("autoblank")=="on"){
         if (window.top !== window) {
             var title2=get_cookie("title2");
