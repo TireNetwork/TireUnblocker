@@ -23,7 +23,7 @@ text-align: center;
    bottom: 0px;
 }
 
-.search {
+.form__input {
 text-align: center;
     border-radius: 18px;
     outline:none;
