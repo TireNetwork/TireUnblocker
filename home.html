@@ -52,15 +52,15 @@ h1 {
 <script src="https://code.jquery.com/jquery-1.10.2.js"></script>
 <link rel="stylesheet" href="index.css">
 
-<div id="content" style="margin-top: 150px;">
-    <form class="searchbox" id="searchbox">
-    <input id="searchengine" value="" type="hidden"/>
-    <input class="search" id="search" placeholder='Search the web freely' type='text'/>
-</form>
-    <div class="desc left-margin">
-        <p id="uv-error"></p>
-        <pre id="uv-error-code"></pre>
-    </div>
+    <div id="content">
+         <form id="uv-form"">
+            <input id="uv-search-engine" value="https://www.google.com/search?q=%s" type="hidden"/> 
+            <input id="uv-address" type="text" placeholder="Search Google or type an URL" class="form__input"/>
+          </form>
+          <div class="desc left-margin">
+            <p id="uv-error"></p>
+            <pre id="uv-error-code"></pre>
+          </div>
 </div>
 
 
