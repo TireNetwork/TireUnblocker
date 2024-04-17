@@ -14,7 +14,7 @@ text-align: center;
              font-size: 70px; /* Adjust font size as needed */ f
 }
  
-.searchbox {
+#searchbox {
      width:47%;
     height:7%;
     color: #FFFFFF;
