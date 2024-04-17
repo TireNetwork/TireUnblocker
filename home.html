@@ -53,10 +53,10 @@ h1 {
 <link rel="stylesheet" href="index.css">
 
 <div id="content" style="margin-top: 150px;">
-    <form id="uv-form">
-        <input id="uv-search-engine" value="https://www.google.com/search?q=%s" type="hidden"/> 
-        <input id="uv-address" type="text" placeholder="Search Google or type an URL (Type 29 to redirect to google)" class="form__input"/>
-    </form>
+    <form class="searchbox" id="searchbox">
+    <input id="searchengine" value="" type="hidden"/>
+    <input class="search" id="search" placeholder='Search the web freely' type='text'/>
+</form>
     <div class="desc left-margin">
         <p id="uv-error"></p>
         <pre id="uv-error-code"></pre>
