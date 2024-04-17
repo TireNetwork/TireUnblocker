@@ -13,8 +13,8 @@ text-align: center;
             font-family: Arial, sans-serif; /* Arial font */
              font-size: 70px; /* Adjust font size as needed */ f
 }
-
-#searchbar {
+ 
+.searchbox {
      width:47%;
     height:7%;
     color: #FFFFFF;
@@ -23,7 +23,7 @@ text-align: center;
    bottom: 0px;
 }
 
-.form__input {
+.search {
 text-align: center;
     border-radius: 18px;
     outline:none;
