@@ -82,6 +82,7 @@
             <li class="nav-item"><a onclick="home();">Home</a></li>
             <li class="nav-item"><a onclick="games();">Games</a></li>
             <li class="nav-item"><a onclick="ab();">about:blank</a></li>
+            <li class="nav-item"><a onclick="mv();">Movies</a></li>
         </ul>
     </div>
     <button id="fsbutton" onclick="toggleSidebar()">☰</button>
@@ -113,6 +114,9 @@
         iframe.style.border = "none";
         iframe.src = url;
         win.document.body.appendChild(iframe);
+    }
+       function mv() {
+        frame.src = "/movies.html";
     }
 
     function toggleSidebar() {
