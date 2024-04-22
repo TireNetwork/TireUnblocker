@@ -5,6 +5,7 @@
 <input type="text" placeholder="Search..." id="searchbar">
 <div class="buttons" align="center" id="buttons"> 
   <button class="games" data-sort="" onclick="paperio();">Paper.io</button>
+  <button class="games" data-sort="" onclick="rbx();">Roblox</button>
 </div>
 
 <style>
@@ -133,4 +134,12 @@
   }
   function paperio(){
     window.location.href=window.location.origin+"/gms/gfiles/paperio.html";
+ function rbx(){
+  var iframe = document.createElement('iframe');
+  iframe.src = 'https://now.derpman.lol/';
+  iframe.style.width = '100%';
+  iframe.style.height = '100%';
+  document.body.appendChild(iframe);
+}
+   
     </script>
