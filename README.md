@@ -1,4 +1,4 @@
-<p align="center"><img src="/img/0737D56F-7BF6-4BB1-AE98-DFF6461A7F3B.png
+<p align="center"><img src="favicon.ico
 " height="200px" width="200px">
 </p>
 
