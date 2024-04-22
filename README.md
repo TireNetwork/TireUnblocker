@@ -1,4 +1,4 @@
-<p align="center"><img src="/img/UB.png" height="200px" width="200px">
+<p align="center"><img src="/img/UN.png" height="200px" width="200px">
 </p>
 
 <h1 align="center">TireUnblocker</h1>
