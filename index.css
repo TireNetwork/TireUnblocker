@@ -1,28 +1,7 @@
-#content {
-  text-align: center;
-  padding: 20px;
-  margin-top: -4%;
-  bottom: 0px;
-}
-
-#content h1 {
-text-align: center;
-            position: relative;
-            
-            color: grey; 
-            font-family: Arial, sans-serif; /* Arial font */
-             font-size: 70px; /* Adjust font size as needed */ f
-}
- 
-#searchbox {
-     width:47%;
-    height:7%;
-    color: #FFFFFF;
-    position: absolute;
-    left:26.5%;
-   bottom: 0px;
-}
-
+ @import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,300;0,400;0,500;1,300;1,400&display=swap");
+    .iframe1{
+    border: none;
+    }
 
     body, html {
         height: 100%;
@@ -62,28 +41,5 @@ text-align: center;
   top: 128px;
 }
 
-a{
-  text-decoration: none;
-  color:white;
-  width:50px;
-  height:50px;
-  padding-right: 1px;
-  padding-left: 1px;
-  text-align: center;
-  align-self: center;
-}
 
-.form__input::placeholder {
-  color: #aaa;
-  text-align: center;
-}
-
-.form_input:hover{
-  cursor:cell;
-}
-
-.form__input:focus {
-  outline: none;
-  box-shadow: 0 0 5px rgba(255, 255, 255, 0.5);
-}
     }
