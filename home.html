@@ -34,58 +34,7 @@ function get_cookie(cookie_name) { const value = "; " + document.cookie; const p
     right:0px;
     }
 </style>
-<script>
-  }
-    
-    if (get_cookie("autoblank")=="on"){
-        if (window.top !== window) {
-            var title2=get_cookie("title2");
-        }
-        else{
-            blank();
-        }
-    }
-    
-    var title2=get_cookie("title2");
-    
-    
-    var fontsize1=2560/screen.width*18.5;
-    var fontsize2=2560/screen.width*7.5;
-    
-    title1.style.fontSize = fontsize1+"px";
-    search.style.fontSize = fontsize2+"px"; 
-</script>
-<script>
-    window.navigator.serviceWorker.register('./sw.js');
-    
-    var title2=get_cookie("title2");
-    var browsertype=get_cookie("browser3");
-    var favicon=get_cookie("favicon");
-    
-    var fontsize1=2560/screen.width*18;
-    var fontsize2=2560/screen.width*7.5;
-    
-    title1.style.fontSize = fontsize1+"px";
-    search.style.fontSize = fontsize2+"px";
 
-    if (browsertype==null || browsertype==undefined || browsertype==""){
-        browsertype="google";
-        searchengine.value="https://www.google.com/search?q=";
-        document.cookie="browser3="+browsertype+"; expires=Thu, 18 Dec 9013 12:00:00 UTC; path=/";
-    }
-    else{
-        if (browsertype=="google"){
-            searchengine.value="https://www.google.com/search?q=%s";
-        }
-        if (browsertype=="bing"){
-            searchengine.value="https://www.bing.com/search?q=%s";
-        }
-        if (browsertype=="yahoo"){
-            searchengine.value="https://search.yahoo.com/search?p=%s";
-        }
-        document.cookie="browser3="+browsertype+"; expires=Thu, 18 Dec 9013 12:00:00 UTC; path=/";
-    } 
-</script>
 
 <script>
 function isUrl(val = '') {
@@ -100,3 +49,13 @@ function isUrl(val = '') {
   searchInput.value = searchEngine || "https://www.google.com/search?q=%s";
 })}
 </script>
+   <style>
+        h1 {
+            text-align: center;
+            position: relative;
+            top: 120px;
+            color: grey; 
+            font-family: Arial, sans-serif; /* Arial font */
+             font-size: 70px; /* Adjust font size as needed */ f
+        }
+    </style>
