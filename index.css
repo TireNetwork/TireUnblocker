@@ -76,3 +76,23 @@ a{
         height: 100%;
         z-index: -1;
     }
+    .searchbox{
+    width:47%;
+    height:7%;
+    color: #FFFFFF;
+    position: absolute;
+    left:26.5%;
+    top:50%;
+    }
+  
+    .search{
+    text-align: center;
+    border-radius: 18px;
+    outline:none;
+    border-radius: 18px;
+    background:transparent;
+    border: 2px solid #FFFFFF;
+    color: #FFFFFF;
+    width:100%;
+    height:100%;
+    }
