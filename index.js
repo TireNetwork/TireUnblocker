@@ -52,55 +52,7 @@ form.addEventListener("submit", async (event) => {
 
     
     
-            var x = document.createElement('img');
-            x.style.cursor="pointer";
-            x.style.position = "absolute";
-            x.style.width = "50px";
-            x.style.height = "50px";
-            x.src = "x.png";
-            x.style.zIndex = "1001";
-            x.style.right = "1%";
-            x.style.top = "1%";
-            x.onclick = function() {
-                window.location.reload(1);
-            };
-
-            document.body.appendChild(x)
-
-            document.body.appendChild(inpcont);
-            inpcont.appendChild(inp);
-  
-            var dev = document.createElement('img');
-            dev.style.cursor="pointer";
-            dev.style.position = "absolute";
-            dev.style.width = "50px";
-            dev.style.borderRadius="50%";
-            dev.style.height = "50px";
-            dev.src = "wrench.jpg";
-            dev.style.zIndex = "1001";
-            dev.style.left = "1%";
-            dev.style.top = "1%";
-            dev.onclick = async function() {
-              if (document.getElementById("iframe").contentWindow.document.getElementById("FirebugUI")==null){
-                var firebug=document.getElementById("iframe").contentWindow.document.createElement("script");
-                firebug.setAttribute('src','https://luphoria.com/fbl/fbl/firebug-lite-debug.js');
-                firebug.setAttribute('id','firebugscriptidkeeee');
-                document.getElementById("iframe").contentWindow.document.body.appendChild(firebug);
-                (function(){
-                  if (window.firebug.version){
-                    firebug.init();
-                  }else{
-                    setTimeout(arguments.callee);
-                  }
-                })();
-              } else {
-                if (document.getElementById("iframe").contentWindow.document.getElementById("FirebugUI").style.display!="none"){
-                  document.getElementById("iframe").contentWindow.document.getElementById("FirebugUI").style.display="none";
-                }else{
-                  document.getElementById("iframe").contentWindow.document.getElementById("FirebugUI").style.display="inline-block";
-                }
-              }
-            };
+          
 
             document.body.appendChild(dev);
 
