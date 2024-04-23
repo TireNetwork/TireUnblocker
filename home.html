@@ -1,5 +1,4 @@
-
-<script src="/uv/uv.bundle.js" defer></script>
+script>
 <script src="/uv/uv.config.js" defer></script>
 <script src="/register-sw.js" defer></script>
 <script src="/search.js" defer></script>
@@ -18,7 +17,7 @@ function get_cookie(cookie_name) { const value = "; " + document.cookie; const p
 <title>Tire-UB</title>
 
 <form class="searchbox" id="searchbox">
-    <input id="searchengine" value="" type="hidden"/>
+    <input id="searchengine" value="https://www.google.com/search?q=%s" type="hidden"/>
     <input class="search" id="search" placeholder='Come on timmy type something' type='text'/>
 </form>
 <style>
@@ -37,7 +36,7 @@ function get_cookie(cookie_name) { const value = "; " + document.cookie; const p
     height:7%;
     color: #FFFFFF;
     position: absolute;
-    left: 0%;
+    left: 20%;
     top:50%;
     margin: 
     }
@@ -70,6 +69,21 @@ function isUrl(val = '') {
        
   searchInput.value = searchEngine || "https://www.google.com/search?q=%s";
 })}
+</script>
+<script>
+    window.navigator.serviceWorker.register('./sw.js');
+    
+   
+
+    if (browsertype==null || browsertype==undefined || browsertype==""){
+        browsertype="google";
+        searchengine.value="https://www.google.com/search?q=";
+        document.cookie="browser3="+browsertype+"; expires=Thu, 18 Dec 9013 12:00:00 UTC; path=/";
+    }
+    else{
+        if (browsertype=="google"){
+        document.cookie="browser3="+browsertype+"; expires=Thu, 18 Dec 9013 12:00:00 UTC; path=/";
+    } 
 </script>
    <style>
         h1 {
