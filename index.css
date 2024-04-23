@@ -40,6 +40,11 @@ text-align: center;
   bottom: 0px;
   top: 128px;
 }
-
-
-    }
+        h1 {
+            text-align: center;
+            position: relative;
+            top: 120px;
+            color: grey; 
+            font-family: Arial, sans-serif; /* Arial font */
+             font-size: 70px; /* Adjust font size as needed */ f
+        }
