@@ -21,38 +21,35 @@ form.addEventListener("submit", async (event) => {
     throw err;
   }
   const url = search(address.value, searchEngine.value);
-      var white = document.createElement('div');
-            white.style.cursor="pointer";
-            white.style.position = "absolute";
-            white.style.width = "100%";
-            white.style.height = "100%";
-            white.style.zIndex="100";
-            white.style.right = "0px";
-            white.className="black";
-            white.style.top = "0px";
-            document.body.appendChild(white);
 
-            
-            var iframe = document.createElement('iframe');
+  var white = document.createElement('div');
+  white.style.cursor = "pointer";
+  white.style.position = "absolute";
+  white.style.width = "100%";
+  white.style.height = "100%";
+  white.style.zIndex = "100";
+  white.style.right = "0px";
+  white.className = "black";
+  white.style.top = "0px";
+  document.body.appendChild(white);
 
-            iframe.style.position = "absolute";
-            iframe.style.width = "100%";
-            iframe.style.height = "100%";
-            iframe.style.top = "0px";
-            iframe.style.left = "0px";
-            iframe.id = "iframe";
-            iframe.style.zIndex="1000";
-            iframe.style.border = "none";
-            iframe.src = __uv$config.prefix + __uv$config.encodeUrl(url);
-            document.body.appendChild(iframe);
+  var iframe = document.createElement('iframe');
+  iframe.style.position = "absolute";
+  iframe.style.width = "100%";
+  iframe.style.height = "100%";
+  iframe.style.top = "0px";
+  iframe.style.left = "0px";
+  iframe.id = "iframe";
+  iframe.style.zIndex = "1000";
+  iframe.style.border = "none";
+  iframe.src = __uv$config.prefix + __uv$config.encodeUrl(url);
+  document.body.appendChild(iframe);
 
-
-    
-            
-
-    
-    
-
-            document.body.appendChild(dev);
-
+  var button = document.createElement('button');
+  button.textContent = "Get iframe URL and Redirect";
+  button.onclick = function() {
+    var iframeUrl = iframe.src;
+    window.location.href = iframeUrl;
+  };
+  document.body.appendChild(button);
 });
