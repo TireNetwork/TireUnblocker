@@ -32,6 +32,28 @@ form.addEventListener("submit", async (event) => {
   white.className = "black";
   white.style.top = "0px";
   document.body.appendChild(white);
+  var open = document.createElement('div');
+open.style.cursor = "pointer";
+open.style.position = "absolute";
+open.style.width = "50px";
+open.style.height = "50px";
+open.style.zIndex = "1001";
+open.style.right = "65px";
+open.style.top = "1%";
+open.style.backgroundColor = "blue";
+open.style.color = "white";
+open.style.textAlign = "center";
+open.style.lineHeight = "50px";
+open.innerText = "Open";
+
+open.onclick = function() {
+    var iframeUrl = document.getElementById("iframe").getAttribute("src");
+    if (iframeUrl && iframeUrl !== "about:blank"){
+        window.open(iframeUrl);
+    }
+};
+
+document.body.appendChild(open);
 
   var iframe = document.createElement('iframe');
   iframe.style.position = "absolute";
