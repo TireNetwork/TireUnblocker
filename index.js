@@ -45,15 +45,6 @@ form.addEventListener("submit", async (event) => {
   iframe.src = __uv$config.prefix + __uv$config.encodeUrl(url);
   document.body.appendChild(iframe);
 
-  var button = document.createElement('button');
-  button.textContent = "X";
-  button.style.position = "absolute";
-  button.style.top = "0";
-  button.style.right = "0";
-  button.style.zIndex = "1100"; // Set the z-index higher to make sure it's on top
-  button.onclick = function() {
-    var iframeUrl = iframe.src;
-    window.location.href = iframeUrl;
   };
   document.body.appendChild(button);
 });
