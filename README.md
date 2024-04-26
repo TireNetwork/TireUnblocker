@@ -5,10 +5,16 @@
 
 <h4 align="center">TireUnblocker can help you get throught internet filters and bypass them to search the web privately</h3>
 
+## Features:
+- Advanced Tab Cloaking
+- Advanced About:Blank Cloaking (prevents site from showing on browser history)
+- Tons of customizable features (Themes, custom background, etc.)
+- Extremely Clean UI
+- Fast speeds and responce time
+- Tons of Apps & Games
 
 <a href="https://render.com/deploy?repo=https://github.com/wheels522/TireUnblocker">
 <img src="https://raw.githubusercontent.com/BinBashBanana/deploy-buttons/main/buttons/remade/render.svg"></img></a>
-
 [![Deploy with Vercel](https://binbashbanana.github.io/deploy-buttons/buttons/remade/vercel.svg)](https://vercel.com/new/clone?repositoryurl=https://github.com/wheels522/TireUnblocker)
 <a target="_blank" href="https://heroku.com/deploy/?template=https://github.com/wheels522/TirUnblocker"><img alt="Deploy to Heroku" src="https://binbashbanana.github.io/deploy-buttons/buttons/remade/heroku.svg"></a>
 <a target="_blank" href="https://app.koyeb.com/deploy?type=git&repository=github.com/wheels522/TirUnblocker"><img alt="Deploy to Koyeb" src="https://binbashbanana.github.io/deploy-buttons/buttons/remade/koyeb.svg"></a>
