@@ -1,50 +1,57 @@
 "use strict";
+
 /**
  * @type {HTMLFormElement}
  */
-const form = document.getElementById("searchbox");
+const form = document.getElementById("uv-form");
+
 /**
  * @type {HTMLInputElement}
  */
-const address = document.getElementById("search");
+const address = document.getElementById("uv-address");
+
 /**
  * @type {HTMLInputElement}
  */
-const searchEngine = document.getElementById("searchengine");
+const searchEngine = document.getElementById("uv-search-engine");
+
+/**
+ * @type {HTMLParagraphElement}
+ */
+const error = document.getElementById("uv-error");
+
+/**
+ * @type {HTMLPreElement}
+ */
+const errorCode = document.getElementById("uv-error-code");
+
 form.addEventListener("submit", async (event) => {
   event.preventDefault();
+
   try {
     await registerSW();
   } catch (err) {
-    alert(err.toString());
+    error.textContent = "Failed to register service worker.";
+    errorCode.textContent = err.toString();
     throw err;
   }
-  const url = search(address.value, searchEngine.value);
-  var white = document.createElement('div');
-  white.style.cursor = "pointer";
-  white.style.position = "absolute";
-  white.style.width = "100%";
-  white.style.height = "100%";
-  white.style.zIndex = "100";
-  white.style.right = "0px";
-  white.className = "black";
-  white.style.top = "0px";
-  document.body.appendChild(white);
-   var iframe = document.createElement('iframe');
-   iframe.style.position = "absolute";
-   iframe.style.width = "100%";
-   iframe.style.height = "100%";
-   iframe.style.top = "0px";
-   iframe.style.left = "0px";
-   iframe.id = "iframe";
-   iframe.style.zIndex = "1000";
- @@ -47,6 +47,10 @@ form.addEventListener("submit", async (event) => {
 
-   var button = document.createElement('button');
-   button.textContent = "Get iframe URL and Redirect";
-   button.onclick = function() {
-     var iframeUrl = iframe.src;
-     window.location.href = iframeUrl;
+  const url = search(address.value, searchEngine.value);
+  location.href = __uv$config.prefix + __uv$config.encodeUrl(url);
+
+  // Integration of variable 'x' from the second script
+  const x = document.createElement('img');
+  x.style.cursor = "pointer";
+  x.style.position = "absolute";
+  x.style.width = "50px";
+  x.style.height = "50px";
+  x.src = "x.png";
+  x.style.zIndex = "1001";
+  x.style.right = "1%";
+  x.style.top = "1%";
+  x.onclick = function () {
+    window.location.reload(1);
   };
-  document.body.appendChild(button);
+
+  document.body.appendChild(x);
 });
