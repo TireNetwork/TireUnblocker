@@ -5,7 +5,7 @@
 
 <h4 align="center">TireUnblocker can help you get throught internet filters and bypass them to search the web privately</h3>
 
-[![Deploy on Railway](https://binbashbanana.github.io/deploy-buttons/buttons/remade/railway.svg)](https://railway.app/template/h7StcI?referralCode=u82tqg)
+
 <a href="https://render.com/deploy?repo=https://github.com/wheels522/TireUnblocker">
 <img src="https://raw.githubusercontent.com/BinBashBanana/deploy-buttons/main/buttons/remade/render.svg"></img></a>
 
