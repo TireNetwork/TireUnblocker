@@ -12,7 +12,7 @@ const address = document.getElementById("search");
  */
 const searchEngine = document.getElementById("searchengine");
 
-document.body.style.backgroundColor = "white"; // Set the background color to white
+
 
 form.addEventListener("submit", async (event) => {
   event.preventDefault();
