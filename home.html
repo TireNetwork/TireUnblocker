@@ -16,14 +16,14 @@ function get_cookie(cookie_name) { const value = "; " + document.cookie; const p
 </div>
 <title>Tire-UB</title>
 
- <form id="uv-form"">
-            <input id="uv-search-engine" value="https://www.google.com/search?q=%s" type="hidden"/> 
-            <input id="uv-address" type="text" placeholder="Search Google or type an URL" class="form__input"/>
-          </form>
-          <div class="desc left-margin">
-            <p id="uv-error"></p>
-            <pre id="uv-error-code"></pre>
-          </div>
+ <form id="uv-form" style="text-align: center; width: 300px; margin: 128px auto 0;">
+        <input id="uv-search-engine" value="https://www.google.com/search?q=%s" type="hidden"/> 
+        <input id="uv-address" type="text" placeholder="Search Google or type an URL" class="form__input" style="width: 100%; padding: 10px; margin-top: 10px; border-radius: 5px; border: 1px solid #ccc; box-sizing: border-box;"/>
+    </form>
+    <div class="desc left-margin" style="margin-left: auto; margin-right: auto; width: 80%; text-align: center;">
+        <p id="uv-error"></p>
+        <pre id="uv-error-code"></pre>
+    </div>
 <style>
     .iframe1{
     border: none;
