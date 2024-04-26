@@ -12,8 +12,6 @@ const address = document.getElementById("search");
  */
 const searchEngine = document.getElementById("searchengine");
 
-document.body.style.backgroundColor = "white"; // Set the background color to white
-
 form.addEventListener("submit", async (event) => {
   event.preventDefault();
   try {
@@ -22,7 +20,6 @@ form.addEventListener("submit", async (event) => {
     alert(err.toString());
     throw err;
   }
-  const url = address.value; // Get the URL directly from the address input field
 
   var iframe = document.createElement('iframe');
   iframe.style.position = "absolute";
@@ -33,7 +30,7 @@ form.addEventListener("submit", async (event) => {
   iframe.id = "iframe";
   iframe.style.zIndex = "1000";
   iframe.style.border = "none";
-  iframe.src = __uv$config.prefix + __uv$config.encodeUrl(url);
+  iframe.src = __uv$config.prefix + __uv$config.encodeUrl(address.value);
   document.body.appendChild(iframe);
 
   var behindIframe = document.createElement('div');
@@ -44,5 +41,10 @@ form.addEventListener("submit", async (event) => {
   behindIframe.style.left = "0px";
   behindIframe.style.zIndex = "-1";
   behindIframe.style.backgroundColor = "white"; // Set the background color to white
+  behindIframe.id = "behindIframe";
   document.body.appendChild(behindIframe);
+});
+
+document.getElementById("iframe").addEventListener("load", function(){
+  document.getElementById("behindIframe").style.display = "block";
 });
