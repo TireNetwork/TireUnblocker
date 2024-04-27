@@ -166,3 +166,13 @@
         }
     });
 </script>
+        <script>
+    window.onload = function() {
+      // Detect if the user is using an iPhone or an Android phone
+      var userAgent = navigator.userAgent || navigator.vendor || window.opera;
+      if (/android/i.test(userAgent) || (/iPhone|iPod/.test(userAgent) && !window.MSStream)) {
+        // Zoom in if the user is on an iPhone or Android phone
+        document.body.style.zoom = "150%";
+      }
+    };
+  </script>
