@@ -1,20 +1,13 @@
 {
-  "name": "education",
-  "version": "4.4.7",
-  "description": "",
-  "type": "module",
-  "engines": {
-    "npm": ">=7.0.0",
-    "node": ">=16.0.0"
-  },
+  "name": "tire-unblocker",
+  "version": "1.0.0",
+  "description": "Tire Unblocker Node.js Server",
+  "main": "index.js",
   "scripts": {
     "start": "node index.js"
   },
-  "keywords": [],
-  "author": "",
-  "license": "GPL-3.0-or-later",
   "dependencies": {
-    "@tomphttp/bare-server-node": "^1.2.6",
-    "express": "^4.18.2"
+    "@tomphttp/bare-server-node": "^1.0.0",
+    "express": "^4.17.1"
   }
 }
