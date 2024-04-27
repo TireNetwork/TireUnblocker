@@ -1,0 +1,86 @@
+<style>
+        html {
+            background-color: black;
+        .button {
+            display: inline-block;
+            padding: 10px 20px;
+            margin: 5px;
+            text-align: center;
+            text-decoration: none;
+            color: white;
+            background-color: #808080;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        .button:hover {
+            background-color: #A9A9A9;
+        }
+        .button-container {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+        .iframe-container {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.5);
+            display: none;
+            justify-content: center;
+            align-items: center;
+            z-index: 9999;
+        }
+        .iframe-content {
+            position: relative;
+            width: 100%;
+            height: 100%;
+        }
+        .iframe-content iframe {
+            width: 100%;
+            height: 100%;
+            border: none;
+        }
+        .close-btn {
+            position: absolute;
+            top: 10px;
+            right: 10px;
+            padding: 5px;
+            background-color: #808080;
+            color: white;
+            border: none;
+            border-radius: 50%;
+            cursor: pointer;
+        }
+        .close-btn:hover {
+            background-color: #A9A9A9;
+        }
+        h1 {
+        color: grey;
+        }
+    
+    </style>
+
+
+<div class="button-container">
+    <button onclick="document.getElementById('videoFrame').src = 'https://c8365730d4.nlos.net/watch/?v21#RzZMQThxT0crMFJYTXBOdS8yejdMYlJIOWpmcTJvZTVrd0tSdmFla2hmRlp2a1RTZDFGaGduOUROZmQ1TDE1KzVHST0'; document.getElementById('iframeContainer').style.display = 'flex';" class="button">Watch Shrek 1</button>
+    <button onclick="document.getElementById('videoFrame').src = 'https://c8365730d4.nlos.net/watch/?v21#OGVzdjR4jUkVlM3AzUEF6K3Vjem4rbTZoSkJsc3FCOWpreVYyNm0xM0tQTWFCazQ0enN5enBWdDZPYUQxY2c1NEVoWT0'; document.getElementById('iframeContainer').style.display = 'flex';" class="button">Watch Shrek 2</button>
+    <button onclick="document.getElementById('videoFrame').src = 'https://c8365730d4.nlos.net/watch/?v21#Um1BcVNmS0Y0M3JsSVFyZEduWXREdHZkc2ZEd3UxNkFjUVgrZ1E2R2tOdno5NDdXeExpenZxbC9XcHFubW9OTlg0TT0'; document.getElementById('iframeContainer').style.display = 'flex';" class="button">Watch Shrek 3</button>
+    <button onclick="document.getElementById('videoFrame').src = 'https://c8365730d4.nlos.net/watch/?v21#UXNHMGFPMnRYM1J5Z055dndRaEtJT3FRbXA0dUo4LzFLVnd6S3huTHg5Q3laOWh6aHErY1FWVit5Rkt6VE9CbUFvMD0'; document.getElementById('iframeContainer').style.display = 'flex';" class="button">Watch Shrek 4</button>
+    <button onclick="document.getElementById('videoFrame').src = 'https://c8365730d4.nlos.net/watch/?v21#K2IrYndXaXZiR2kxWTFBNzUyWGZ5RVd3V2w3Q29oaElRSEU2MVFaNlgzTEg0NTVqN0p0Z1BVVXVVTjJmYldUZno0VXRwbXNYSGxJPQ'; document.getElementById('iframeContainer').style.display = 'flex';" class="button">Watch fnaf movie</button>
+<button onclick="document.getElementById('videoFrame').src = 'https://c8365730d4.nlos.net/watch/?v21#UDIvd2E1Qlhka05QN013WnNJaU5aVUVtTWk4cEhqaWxHaGR0ejc3QXlrNWdRc0xYMUtxT0JWaGdFVEpGOU9nd0VxMzhMVXgwb0FVPQ'; document.getElementById('iframeContainer').style.display = 'flex';" class="button">Watch mario movie</button>
+
+
+    
+</div>
+
+<div class="iframe-container" id="iframeContainer">
+    <div class="iframe-content">
+        <button class="close-btn" onclick="document.getElementById('videoFrame').src = ''; document.getElementById('iframeContainer').style.display = 'none';">X</button>
+        <iframe id="videoFrame" src="" frameborder="0"
+            allowfullscreen></iframe>
+    </div>
+</div>
+<h1 id="credits">credits to https://123movies-to.org for the movies</h1>

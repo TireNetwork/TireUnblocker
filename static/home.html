@@ -1,0 +1,114 @@
+<script src="/uv/uv.bundle.js" defer></script>
+<script src="/uv/uv.config.js" defer></script>
+<script src="/register-sw.js" defer></script>
+<script src="/search.js" defer></script>
+<script src="index.js" defer></script>
+<script src="/error.js" defer></script>
+
+<script>
+function get_cookie(cookie_name) { const value = "; " + document.cookie; const parts = value.split("; " + cookie_name + "="); if (parts.length === 2) return parts.pop().split(";").shift(); } 
+    function blank(){
+      (function () {var url = document.URL; var urlObj = new window.URL(window.location.href); win = window.open(); win.document.body.style.margin = "0"; win.document.body.style.height = "100vh"; var iframe = win.document.createElement("iframe"); iframe.style.border = "none"; iframe.style.width = "100%"; iframe.style.height = "100%"; iframe.style.margin = "0"; iframe.referrerpolicy = "no-referrer"; iframe.allow = "fullscreen"; iframe.src = url.toString(); win.document.body.appendChild(iframe);window.location.href="https://google.com";})();
+    }
+</script>
+<div class="title">
+    <h1 id="title1">TireUnblocker</h1>
+</div>
+<title>Tire-UB</title>
+
+<form class="searchbox" id="searchbox">
+    <input id="searchengine" value="https://www.google.com/search?q=%s" type="hidden"/>
+    <input class="search" id="search" placeholder='Come on timmy type something' type='text'/>
+</form>
+<style>
+    .iframe1{
+    border: none;
+    }
+     .x{
+    position: absolute;
+    width:70px;
+    height:70px;
+    top:0px;
+    right:0px;
+    }
+      .searchbox{
+    width:47%;
+    height:7%;
+    color: #FFFFFF;
+    position: absolute;
+    left: 20%;
+    top:50%;
+    margin: 
+    }
+  
+    .search {
+text-align: center;
+    border-radius: 18px;
+    outline:none;
+    border-radius: 18px;
+    background:transparent;
+    border: 2px solid white;
+    color: grey;
+    width: 600px;
+    height:50px;
+  bottom: 0px;
+  top: 128px;
+}
+</style>
+
+
+<script>
+function isUrl(val = '') {
+        if (/^http(s?):\/\//.test(val) || val.includes('.') && val.substr(0, 1) !== ' ') return true;
+        return false;
+    };
+    
+   document.addEventListener("DOMContentLoaded", function() {
+  var searchEngine = document.getElementById("searchengine").value;
+  var searchInput = document.getElementById("search").value;
+       
+  searchInput.value = searchEngine || "https://www.google.com/search?q=%s";
+})}
+</script>
+<script>
+    window.navigator.serviceWorker.register('./sw.js');
+    
+   
+
+    if (browsertype==null || browsertype==undefined || browsertype==""){
+        browsertype="google";
+        searchengine.value="https://www.google.com/search?q=";
+        document.cookie="browser3="+browsertype+"; expires=Thu, 18 Dec 9013 12:00:00 UTC; path=/";
+    }
+    else{
+        if (browsertype=="google"){
+        document.cookie="browser3="+browsertype+"; expires=Thu, 18 Dec 9013 12:00:00 UTC; path=/";
+    } 
+</script>
+   <style>
+        h1 {
+            text-align: center;
+            position: relative;
+            top: 120px;
+            color: grey; 
+            font-family: Arial, sans-serif; /* Arial font */
+             font-size: 70px; /* Adjust font size as needed */ f
+        }
+       
+    </style>
+<style>
+    body, html {
+        height: 100%;
+        margin: 0;
+        overflow: hidden;
+  background-color: black;
+    }
+    #container {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        z-index: -1;
+    }
+</style>
