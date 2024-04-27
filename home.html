@@ -5,21 +5,28 @@
 <script src="index.js" defer></script>
 <script src="/error.js" defer></script>
 
-<script>
-function get_cookie(cookie_name) { const value = "; " + document.cookie; const parts = value.split("; " + cookie_name + "="); if (parts.length === 2) return parts.pop().split(";").shift(); } 
-    function blank(){
-      (function () {var url = document.URL; var urlObj = new window.URL(window.location.href); win = window.open(); win.document.body.style.margin = "0"; win.document.body.style.height = "100vh"; var iframe = win.document.createElement("iframe"); iframe.style.border = "none"; iframe.style.width = "100%"; iframe.style.height = "100%"; iframe.style.margin = "0"; iframe.referrerpolicy = "no-referrer"; iframe.allow = "fullscreen"; iframe.src = url.toString(); win.document.body.appendChild(iframe);window.location.href="https://google.com";})();
-    }
-</script>
+
 <div class="title">
     <h1 id="title1">TireUnblocker</h1>
 </div>
 <title>Tire-UB</title>
 
-<form class="searchbox" id="searchbox">
-    <input id="searchengine" value="https://www.google.com/search?q=%s" type="hidden"/>
-    <input class="search" id="search" placeholder='Come on timmy type something' type='text'/>
-</form>
+ <form id="daform" style="text-align: center; width: 700px; margin: 128px auto 0;">
+        <input id="dasearchengine" value="https://www.google.com/search?q=%s" type="hidden"/> 
+        <input id="daaddress" type="text" placeholder="Search Google or type an URL" class="form__input" style="width: 100%; padding: 10px; margin-top: 10px; text-align: center;
+    border-radius: 18px;
+    outline:none;
+    border-radius: 18px;
+    background:transparent;
+    border: 2px solid white;
+    color: grey;
+    width: 600px;
+    height:50px;"/>
+    </form>
+    <div class="desc left-margin" style="margin-left: auto; margin-right: auto; width: 80%; text-align: center;">
+        <p id="uv-error"></p>
+        <pre id="uv-error-code"></pre>
+    </div>
 <style>
     .iframe1{
     border: none;
@@ -31,6 +38,7 @@ function get_cookie(cookie_name) { const value = "; " + document.cookie; const p
     top:0px;
     right:0px;
     }
+   
       .searchbox{
     width:47%;
     height:7%;
@@ -41,7 +49,7 @@ function get_cookie(cookie_name) { const value = "; " + document.cookie; const p
     margin: 
     }
   
-    .search {
+    .form__input {
 text-align: center;
     border-radius: 18px;
     outline:none;
@@ -57,34 +65,6 @@ text-align: center;
 </style>
 
 
-<script>
-function isUrl(val = '') {
-        if (/^http(s?):\/\//.test(val) || val.includes('.') && val.substr(0, 1) !== ' ') return true;
-        return false;
-    };
-    
-   document.addEventListener("DOMContentLoaded", function() {
-  var searchEngine = document.getElementById("searchengine").value;
-  var searchInput = document.getElementById("search").value;
-       
-  searchInput.value = searchEngine || "https://www.google.com/search?q=%s";
-})}
-</script>
-<script>
-    window.navigator.serviceWorker.register('./sw.js');
-    
-   
-
-    if (browsertype==null || browsertype==undefined || browsertype==""){
-        browsertype="google";
-        searchengine.value="https://www.google.com/search?q=";
-        document.cookie="browser3="+browsertype+"; expires=Thu, 18 Dec 9013 12:00:00 UTC; path=/";
-    }
-    else{
-        if (browsertype=="google"){
-        document.cookie="browser3="+browsertype+"; expires=Thu, 18 Dec 9013 12:00:00 UTC; path=/";
-    } 
-</script>
    <style>
         h1 {
             text-align: center;

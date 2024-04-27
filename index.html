@@ -1,4 +1,5 @@
 <title>Tire-UB</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
     <link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png">
     <link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png">
@@ -32,7 +33,7 @@
     z-index: 2; /* Ensure the sidebar overlaps other content */
 }
     body {
-        
+        overflow: hidden;
         margin: 0;
         padding: 0;
     }
@@ -166,3 +167,13 @@
         }
     });
 </script>
+        <script>
+    window.onload = function() {
+      // Detect if the user is using an iPhone or an Android phone
+      var userAgent = navigator.userAgent || navigator.vendor || window.opera;
+      if (/android/i.test(userAgent) || (/iPhone|iPod/.test(userAgent) && !window.MSStream)) {
+        // Zoom in if the user is on an iPhone or Android phone
+        document.body.style.zoom = "150%";
+      }
+    };
+  </script>
