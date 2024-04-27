@@ -1,45 +1,21 @@
-import express from "express";
-import http from "node:http";
-import path from "node:path";
-import createBareServer from "@tomphttp/bare-server-node";
+// Importing required modules
+const express = require('express'); // Express.js framework
+const path = require('path'); // Path module for file paths
 
-const __dirname = process.cwd();
-const server = http.createServer();
-const app = express(server);
-const bareServer = createBareServer("/bare/");
+// Creating an Express application
+const app = express();
 
-app.use(express.json());
-app.use(
-  express.urlencoded({
-    extended: true,
-  })
-);
+// Serving static files from the 'static' directory
+app.use(express.static(path.join(__dirname, 'static')));
 
-app.use(express.static(path.join(__dirname, "static")));
+// Route for serving the index.html file
 app.get('/', (req, res) => {
-  res.sendFile(path.join(process.cwd(), './static/index.html'));
+  // Sending the index.html file when the root URL is accessed
+  res.sendFile(path.join(__dirname, 'static', 'index.html'));
 });
 
-server.on("request", (req, res) => {
-  if (bareServer.shouldRoute(req)) {
-    bareServer.routeRequest(req, res);
-  } else {
-    app(req, res);
-  }
-});
-
-server.on("upgrade", (req, socket, head) => {
-  if (bareServer.shouldRoute(req)) {
-    bareServer.routeUpgrade(req, socket, head);
-  } else {
-    socket.end();
-  }
-});
-
-server.on("listening", () => {
-  console.log(`Tire Unblocker has successfully started!\nListening on localhost (Port 8000).`);
-});
-
-server.listen({
-  port: 8000,
+// Starting the server
+const PORT = process.env.PORT || 3000; // Using the environment variable PORT or defaulting to port 3000
+app.listen(PORT, () => {
+  console.log(`Server is running on port ${PORT}`);
 });
