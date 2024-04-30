@@ -1,0 +1,5 @@
+services:
+  - type: web
+    name: tireub
+    env: docker
+    plan: free

@@ -1,4 +1,4 @@
-<p align="center"><img src="apple-touch-icon.png" height="200px" width="200px">
+<p align="center"><img src="/static/apple-touch-icon.png" height="200px" width="200px">
 </p>
 
 <h1 align="center">TireUnblocker</h1> 
@@ -21,6 +21,3 @@
 <a target="_blank" href="https://app.koyeb.com/deploy?type=git&repository=github.com/wheels522/TirUnblocker"><img alt="Deploy to Koyeb" src="https://binbashbanana.github.io/deploy-buttons/buttons/remade/koyeb.svg"></a>
 <a target="_blank" href="https://app.cyclic.sh/api/app/deploy/wheels522/TirUnblocker"><img alt="Deploy to Cyclic" src="https://binbashbanana.github.io/deploy-buttons/buttons/remade/cyclic.svg"></a>
 [![Deploy with Vercel](https://binbashbanana.github.io/deploy-buttons/buttons/remade/vercel.svg)](https://vercel.com/new/clone?repositoryurl=https://github.com/wheels522/TireUnblocker)
-
-### Discord
-[![Join us on Discord](https://invidget.switchblade.xyz/J4UkywTZ?theme=dark)](https://discord.com/invite/J4UkywTZ)
