@@ -4,7 +4,7 @@ const { createBareServer } = require('@tomphttp/bare-server-node');
 
 const httpServer = http.createServer();
 
-const bareServer = createBareServer('/');
+const bareServer = createBareServer('/bare/');
 
 httpServer.on('request', (req, res) => {
 	if (bareServer.shouldRoute(req)) {
