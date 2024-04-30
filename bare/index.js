@@ -1,5 +1,4 @@
-
-<script>/* eslint-disable @typescript-eslint/no-var-requires */
+/* eslint-disable @typescript-eslint/no-var-requires */
 const http = require('node:http');
 const { createBareServer } = require('@tomphttp/bare-server-node');
 
@@ -30,4 +29,4 @@ httpServer.on('listening', () => {
 
 httpServer.listen({
 	port: 8080,
-});</script>
+});
