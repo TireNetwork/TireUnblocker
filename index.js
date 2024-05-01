@@ -8,7 +8,7 @@ import config from './config.js'
 const __dirname = process.cwd()
 const server = http.createServer()
 const app = express(server)
-const bareServer = createBareServer('/bare/')
+const bareServer = createBareServer('/bare')
 const PORT = process.env.PORT || 8080
 
 app.use(express.json())
