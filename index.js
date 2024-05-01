@@ -1,4 +1,4 @@
-import express from 'express'
+/*/ credits to interstellar/*/ import express from 'express'
 import basicAuth from 'express-basic-auth'
 import http from 'node:http'
 import { createBareServer } from '@tomphttp/bare-server-node'
@@ -20,7 +20,7 @@ if (config.routes !== false) {
   const routes = [
 
     { path: '/', file: 'index.html' },
-    { path: '/', file: 'gms' },
+    { path: '/', file: 'games.html' },
     { path: '/', file: 'movies.html' },
     { path: '/', file: '' },
   ]
