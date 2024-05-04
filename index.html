@@ -77,6 +77,9 @@
             box-shadow: 0 6px 2px -2px white;
             color: white;
         }
+    .nav-item form {
+    margin: 0 auto;
+}
 
         /* Transparent black fade effect when sidebar is open */
         .blurred {
@@ -97,22 +100,11 @@
             <li class="nav-item"><a onclick="games();">Games</a></li>
             <li class="nav-item"><a onclick="ab();">about:blank</a></li>
             <li class="nav-item"><a onclick="mv();">Movies</a></li>
-           <li class="nav-item"> <form id="daform" style="text-align: center; width: -200px; margin: 128px bottom: 0; position: fixed; auto 0;">
-        <input id="dasearchengine" value="https://www.google.com/search?q=%s" type="hidden"/> 
-        <input id="daaddress" type="text" placeholder="Search Google or type an URL" class="form__input" style="width: 100%; padding: 10px; margin-top: 10px; text-align: center;
-    border-radius: 18px;
-    outline:none;
-    border-radius: 18px;
-    background:transparent;
-    border: 2px solid white;
-    color: grey;
-    width: 200px;
-    height:50px;"/>
+          <li class="nav-item">
+    <form id="daform" style="text-align: center;">
+        <input id="daaddress" type="text" placeholder="Search Google or type an URL" class="form__input" style="width: 80%; padding: 10px; margin-top: 10px; text-align: center; border-radius: 18px; outline:none; border-radius: 18px; background:transparent; border: 2px solid white; color: grey;"/>
     </form>
-    <div class="desc left-margin" style="margin-left: auto; margin-right: auto; width: 80%; text-align: center;">
-        <p id="uv-error"></p>
-        <pre id="uv-error-code"></pre>
-    </div>
+</li>
            </li>
         </ul>
     </div>
