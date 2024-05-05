@@ -1,4 +1,41 @@
-<style>
+
+    <style>
+        /* Styling for the moving text bar */
+        .moving-bar {
+            
+            color: grey;
+            padding: 10px 0;
+            overflow: hidden;
+            position: relative;
+            fint-family: arial;
+        }
+
+        /* Styling for the moving text animation */
+        .moving-text {
+            position: absolute;
+            top: 0;
+            left: -100%;
+            width: 100%;
+            height: 100%;
+            animation: moveText 15s linear infinite;
+            font-family: arial;
+        }
+
+        /* Keyframe animation for moving text */
+        @keyframes moveText {
+            0% {
+                left: -100%;
+            }
+            100% {
+                left: 100%;
+            }
+        }
+    </style>
+
+    <div class="moving-bar">
+        <div class="moving-text">Updates: new animations and bug fixes</div>
+    </div>
+    <style>
 		body, html {
 		    height: 100%;
 		    margin: 0;;
