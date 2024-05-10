@@ -20,9 +20,9 @@ if (config.routes !== false) {
   const routes = [
 
     { path: '/', file: 'index.html' },
-    { path: '/', file: 'gms' },
+    { path: '/', file: 'games.html' },
     { path: '/', file: 'movies.html' },
-    { path: '/', file: '' },
+    { path: '/', file: 'home.html' },
   ]
 
   routes.forEach((route) => {
