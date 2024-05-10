@@ -1,0 +1,50 @@
+ @import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,300;0,400;0,500;1,300;1,400&display=swap");
+    .iframe1{
+    border: none;
+    }
+
+    body, html {
+        height: 100%;
+        margin: 0;
+        padding: 0; /* Add this line to remove any padding */
+        overflow: hidden;
+      background-color: black;
+    }
+    #container {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        z-index: -1;
+    }
+    .searchbox{
+    width:47%;
+    height:7%;
+    color: #FFFFFF;
+    position: absolute;
+    left:26.5%;
+    top:50%;
+    }
+  
+    .search {
+text-align: center;
+    border-radius: 18px;
+    outline:none;
+    border-radius: 18px;
+    background:transparent;
+    border: 2px solid white;
+    color: grey;
+    width: 600px;
+    height:50px;
+  bottom: 0px;
+  top: 128px;
+}
+        h1 {
+            text-align: center;
+            position: relative;
+            top: 120px;
+            color: grey; 
+            font-family: Arial, sans-serif; /* Arial font */
+             font-size: 70px; /* Adjust font size as needed */ f
+        }

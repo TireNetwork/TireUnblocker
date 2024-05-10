@@ -1,0 +1,226 @@
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=0.9">
+    <meta name="description" content="TireUnblocker can help you get through internet filters and bypass them to search the web privately. Enjoy features such as Advanced Tab Cloaking, Advanced About:Blank Cloaking (prevents sites from showing in browser history), an extremely clean UI, fast speeds and response times, and access to tons of apps and games.">
+    <meta name="keywords" content="TireUnblocker, internet filters, bypass filters, web privacy, tab cloaking, clean UI, fast speeds, apps, games">
+    <meta name="author" content="TireUnblocker Team">
+    <meta property="og:title" content="TireUnblocker">
+    <meta property="og:description" content="TireUnblocker can help you get through internet filters and bypass them to search the web privately. Enjoy features such as Advanced Tab Cloaking, Advanced About:Blank Cloaking (prevents sites from showing in browser history), an extremely clean UI, fast speeds and response times, and access to tons of apps and games.">
+    <meta property="og:image" content="https://tireunblocker.pages.dev/img/UB.png">
+    <meta property="og:url" content="https://tireunblocker.pages.dev">
+  
+    <meta name="twitter:title" content="TireUnblocker">
+    <meta name="twitter:description" content="TireUnblocker can help you get through internet filters and bypass them to search the web privately. Enjoy features such as Advanced Tab Cloaking, Advanced About:Blank Cloaking (prevents sites from showing in browser history), an extremely clean UI, fast speeds and response times, and access to tons of apps and games.">
+
+    <style>
+        /* Styling for the moving text bar */
+        .moving-bar {
+            
+            color: grey;
+            padding: 10px 0;ng
+            overflow: hidden;
+            position: relative;
+            font-family: arial;
+            height: 10px;
+        }
+
+        /* Styling for the moving text animation */
+        .moving-text {
+            position: absolute;
+            top: 0;
+            left: -100%;
+            width: 100%;
+            height: 100%;
+            animation: moveText 15s linear infinite;
+            font-family: arial;
+            padding: 5px;
+        }
+
+        /* Keyframe animation for moving text */
+        @keyframes moveText {
+            0% {
+                left: -100%;
+            }
+            100% {
+                left: 100%;
+            }
+        }
+    </style><div class="moving-bar">
+        <div class="moving-text">Updates: new animations and bug fixes</div>
+    </div>
+    <style>
+		body, html {
+		    height: 100%;
+		    margin: 0;
+		overflow:hidden;
+		}
+		#container {
+		    position: fixed;
+		    top: 0;
+		    left: 0;
+		    width: 100%;
+		    height: 100%;
+		    z-index: -1;
+		}
+		canvas {
+		    display: block;
+		}
+	</style>
+	<div id="container"></div>
+
+	<script src="/uv/uv.bundle.js" defer></script>
+	<script src="/uv/uv.config.js" defer></script>
+	<script src="/register-sw.js" defer></script>
+	<script src="/search.js" defer></script>
+	<script src="index.js" defer></script>
+	<script src="/error.js" defer></script>
+
+	<div class="title">
+	    <h1 id="title1">TireUnblocker</h1>
+	</div>
+	<title>Tire-UB</title>
+
+<form id="daform" style="text-align: center; width: 700px; margin: 200px auto 0;">
+        <input id="dasearchengine" value="https://www.google.com/search?q=%s" type="hidden"/> 
+        <input id="daaddress" type="text" placeholder="Search Google or type an URL" class="form__input" style="width: 100%; padding: 10px; margin-top: 10px; text-align: center;
+    border-radius: 18px;
+    outline:none;
+    border-radius: 18px;
+    background:transparent;
+    border: 2px solid white;
+    color: grey;
+    width: 600px;
+    height:50px;"/>
+    </form>
+	<div class="desc left-margin" style="margin-left: auto; margin-right: auto; width: 80%; text-align: center;">
+	    <p id="uv-error"></p>
+	    <pre id="uv-error-code"></pre>
+	</div>
+
+	<style>
+	    .iframe1{
+	    border: none;
+	    }
+	     .x{
+	    position: absolute;
+	    width:70px;
+	    height:70px;
+	    top:0px;
+	    right:0px;
+	    }
+
+	      .searchbox{
+	    width:47%;
+	    height:7%;
+	    color: #FFFFFF;
+	    position: absolute;
+	    left: 20%;
+	    top:50%;
+	    margin: 
+	    }
+
+	    .form__input {
+	text-align: center;
+	    border-radius: 18px;
+	    outline:none;
+	    border-radius: 18px;
+	    background:transparent;
+	    border: 2px solid white;
+	    color: grey;
+	    width: 600px;
+	    height:50px;
+	  bottom: 0px;
+	  top: 128px;
+	}
+	</style>
+
+
+	   <style>
+	        h1 {
+	            text-align: center;
+	            position: relative;
+	            top: 190px;
+	            color: grey; 
+	            font-family: Arial, sans-serif; /* Arial font */
+	             font-size: 70px; /* Adjust font size as needed */ f
+	        }
+
+	    </style>
+
+	<canvas id="cosmicBackground" style="position: absolute; top: 0; left: 0; z-index: -2;"></canvas>
+
+	<script>
+		var t = 0;
+		var c = document.getElementById("cosmicBackground");	 
+		var $ = c.getContext('2d');
+		c.width = window.innerWidth;
+		c.height = window.innerHeight;
+
+		window.addEventListener('resize', function() {
+		  c.width = window.innerWidth;
+		  c.height = window.innerHeight;
+		}, false);
+
+		function draw() {
+		  $.globalCompositeOperation = 'source-over';
+		  $.fillStyle = 'hsla(0,0%,0%,.1)';
+		  $.fillRect(0, 0, c.width, c.height);
+		  var foo, i, j, r;
+		  foo = Math.sin(t) * 2 * Math.PI;
+		  for (i=0; i<300; ++i) {
+			r = 300 * Math.cos(i * foo);
+			$.globalCompositeOperation = '';
+			$.fillStyle = 'hsla(0,0%,50%,0.7)';
+			$.beginPath();
+			$.arc(Math.sin(i) * r + (c.width / 2), 
+				  Math.cos(i) * r + (c.height / 2), 
+				  2, 0, Math.PI * 2);
+			$.fill();
+		  }
+		  t += 0.00001/2;
+		  return t %= 2 * Math.PI;
+		};
+
+		function run() {
+		  window.requestAnimationFrame(run);
+		  draw();
+		}
+		run();
+
+		var backgroundPulse = setInterval(pulseBackground, 5000);
+
+		function pulseBackground() {
+			var currentAlpha = parseFloat($.fillStyle.split(',')[3]);
+			var newAlpha = currentAlpha === 0.1 ? 0.15 : 0.1;
+			$.fillStyle = 'hsla(0,0%,0%,' + newAlpha + ')';
+		}
+
+		window.addEventListener('focus', function() {
+			clearInterval(backgroundPulse);
+			c.style.filter = "brightness(100%)";
+		});
+
+		window.addEventListener('blur', function() {
+			backgroundPulse = setInterval(pulseBackground, 5000);
+			c.style.filter = "brightness(50%)";
+		});
+
+		c.addEventListener('mousemove', function(event) {
+			var mouseX = event.clientX;
+			var mouseY = event.clientY;
+			$.clearRect(0, 0, c.width, c.height);
+			draw();
+			for (var i = 0; i < 300; ++i) {
+				r = 300 * Math.cos(i * Math.sin(t));
+				$.fillStyle = 'hsla(0,0%,50%,0.7)';
+				$.beginPath();
+				$.arc(Math.sin(i) * r + (c.width / 2), 
+					  Math.cos(i) * r + (c.height / 2), 
+					  2, 0, Math.PI * 2);
+				if (Math.abs(mouseX - (Math.sin(i) * r + (c.width / 2))) < 50 && 
+					Math.abs(mouseY - (Math.cos(i) * r + (c.height / 2))) < 50) {
+					$.fillStyle = 'hsla(0,0%,50%,1)';
+				}
+				$.fill();
+			}
+		});
+	</script>
