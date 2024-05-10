@@ -22,7 +22,7 @@ if (config.routes !== false) {
     { path: '/', file: 'index.html' },
     { path: '/', file: 'games.html' },
     { path: '/', file: 'movies.html' },
-    { path: '/', file: 'home.html' },
+    { path: '/', file: 'img' },
   ]
 
   routes.forEach((route) => {
