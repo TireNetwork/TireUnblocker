@@ -1,5 +1,14 @@
 <center><img src="/img/404-tire.png" width="700px" height="400px">
-<h1>404 Not Found :(</h1></center>
+<h1>404 Not Found </h1>
+<div id="emoticon"></div>
+    <script>
+        function getRandomEmoticon() {
+            var emoticons = [":(", "☹️", ":|", ":[", ":{", ":€", "😕", "🙁", "😖", "😣"];
+            return emoticons[Math.floor(Math.random() * emoticons.length)];
+        }
+
+        document.getElementById("emoticon").innerText = getRandomEmoticon();
+    </script></center>
 <style>
 body {
 background-color: black;
