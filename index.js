@@ -75,7 +75,7 @@ server.on('upgrade', (req, socket, head) => {
 })
 
 server.on('listening', () => {
-  console.log(`Running at http://localhost:${PORT}`)
+  console.log(`TireUnblocker is running at http://localhost:${PORT}`)
 })
 
 server.listen({
