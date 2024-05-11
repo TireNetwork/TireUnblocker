@@ -73,7 +73,10 @@ server.on('upgrade', (req, socket, head) => {
     socket.end()
   }
 })
-
+app.use((req, res) => {
+  res.statusCode = 404;
+  res.render("404", { title: "404 | Error", error: "It looks like the page you were looking for doesn't exist.",});
+});
 server.on('listening', () => {
   console.log(`TireUnblocker is running at http://localhost:${PORT}`)
 })
