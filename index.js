@@ -16,9 +16,13 @@ app.use(express.urlencoded({ extended: true }))
 app.use(cors())
 app.use(express.static(path.join(__dirname, 'static')))
 
+// Route to handle 404 errors
+app.use((req, res, next) => {
+  res.status(404).sendFile(path.join(__dirname, 'static', '404.html'))
+})
+
 if (config.routes !== false) {
   const routes = [
-
     { path: '/', file: 'index.html' },
     { path: '/', file: 'games.html' },
     { path: '/', file: 'movies.html' },
@@ -73,10 +77,7 @@ server.on('upgrade', (req, socket, head) => {
     socket.end()
   }
 })
-app.use((req, res) => {
-  res.statusCode = 404;
-  res.render("404", { title: "404 | Error", error: "It looks like the page you were looking for doesn't exist.",});
-});
+
 server.on('listening', () => {
   console.log(`TireUnblocker is running at http://localhost:${PORT}`)
 })
