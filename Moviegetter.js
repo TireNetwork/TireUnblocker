@@ -4,7 +4,7 @@ function blockRedirects() {
   var currentDomain = window.location.hostname;
 
   // Check if the current domain is "123movies-to.org"
-  if (currentDomain === '123movies-to.org') {
+  if (currentDomain === 'https://sflix.se') {
     // Override the window.location.assign function to intercept redirects
     var originalAssign = window.location.assign;
     window.location.assign = function(url) {
@@ -12,7 +12,7 @@ function blockRedirects() {
       var redirectURL = new URL(url);
 
       // Check if the domain of the redirect URL is different from "123movies-to.org"
-      if (redirectURL.hostname !== '123movies-to.org') {
+      if (redirectURL.hostname !== 'https://sflix.se') {
         // Show an alert indicating that the redirect was blocked
         alert('Redirect blocked to ' + url);
       } else {
