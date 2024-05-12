@@ -1,5 +1,5 @@
 <title>404 | Error</title><center><img src="/img/404-tire.png" width="700px" height="400px">
-<h1>404 Not Found <div id="emoticon"></div></h1>
+<h1>404 Not Found <p onclick="gohome();">go home?</p> <div id="emoticon"></div></h1>
 </center>
 <style>
 body {
@@ -20,4 +20,7 @@ color:white;</style>
         }
 
         document.getElementById("emoticon").innerText = getRandomEmoticon();
+  function gohome(){
+    window.location.href=window.location.origin;
+  }
     </script>
