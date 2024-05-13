@@ -111,6 +111,7 @@
         <ul class="sidebar" id="sidebar">
             <li class="nav-item"><a onclick="home();">Home</a></li>
             <li class="nav-item"><a onclick="games();">Games</a></li>
+            <li class="nav-item"><a onclick="apps();">Apps</a></li>
             <li class="nav-item"><a onclick="ab();">about:blank</a></li>
             <li class="nav-item"><a onclick="mv();">Movies</a></li>
             <li class="nav-item"><a onclick="music();">TireMusic</a></li>
@@ -157,7 +158,9 @@
        function mv() {
         frame.src = "/movies.html";
     }
-
+function apps() {
+        frame.src = "https://cool.blinklab.com/apps/";
+    }
     function toggleSidebar() {
         var sidebar = document.getElementById('sidebar');
         sidebar.classList.toggle('active');
