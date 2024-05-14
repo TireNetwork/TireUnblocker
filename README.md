@@ -23,4 +23,4 @@
 [![Deploy with Vercel](https://binbashbanana.github.io/deploy-buttons/buttons/remade/vercel.svg)](https://vercel.com/new/clone?repositoryurl=https://github.com/wheels522/TireUnblocker)
 ## Discord Server
 
-![Join us on Discord](https://invidget.switchblade.xyz/k7AMxeuwW5?theme=light)
+![Join us on Discord](https://invidget.switchblade.xyz/b22KkVx7?theme=dark)
