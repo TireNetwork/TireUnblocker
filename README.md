@@ -5,9 +5,9 @@
 
 ## About:
 <center><h4 align="center">TireUnblocker can help you get throught internet filters and bypass them to search the web privately</h3>
-<a href="" alt="Made with NodeJS"><img src="https://img.shields.io/badge/Made%20with-Node.JS-6DA55F?style=for-the-badge&logo=node.js&logoColor=black"></a> 
-<a href="https://github.com/wheels522/TireUnblocker/issues/" alt="GitHub issues"><img src="https://img.shields.io/github/issues/wheels522/TireUnblocker?style=for-the-badge"></a>
-<a href="https://github.com/wheels522/TireUnblocker/graphs/contributors/" alt=""><img src="https://img.shields.io/github/contributors/NRZT555/GoogleRedirect?style=for-the-badge"></a>
+<a align="center" href="" alt="Made with NodeJS"><img align="center" src="https://img.shields.io/badge/Made%20with-Node.JS-6DA55F?style=for-the-badge&logo=node.js&logoColor=black"></a> 
+<a align="center" href="https://github.com/wheels522/TireUnblocker/issues/" alt="GitHub issues"><img align="center" src="https://img.shields.io/github/issues/wheels522/TireUnblocker?style=for-the-badge"></a>
+<a align="center" href="https://github.com/wheels522/TireUnblocker/graphs/contributors/" alt=""><img align="center" src="https://img.shields.io/github/contributors/NRZT555/GoogleRedirect?style=for-the-badge"></a>
 </center>
 
 ## Features:
