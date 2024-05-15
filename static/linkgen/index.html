@@ -1,0 +1,76 @@
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: black;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+        }
+
+        .container {
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            text-align: center;
+            width: 300px;
+        }
+
+        h1 {
+            font-size: 24px;
+            margin-bottom: 20px;
+            color: grey;
+        }
+
+        button {
+            padding: 10px 20px;
+            font-size: 16px;
+            color: white;
+            background-color: grey;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+
+        button:disabled {
+            background-color: #999;
+            cursor: not-allowed;
+        }
+
+        .link-display {
+            margin-top: 20px;
+            font-size: 16px;
+        }
+    </style>
+
+    <div class="container">
+        <h1>TireUnblocker Link Generator</h1>
+        <button id="generateButton">Generate Link</button>
+        <div id="linkDisplay" class="link-display"></div>
+    </div>
+    <?php include 'db_operations.php'; ?>
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const generateButton = document.getElementById('generateButton');
+            const linkDisplay = document.getElementById('linkDisplay');
+
+            generateButton.addEventListener('click', function() {
+                // Make an AJAX request to get a random link
+                var xhr = new XMLHttpRequest();
+                xhr.onreadystatechange = function() {
+                    if (this.readyState == 4 && this.status == 200) {
+                        var randomLink = this.responseText;
+                        // Display the link
+                        linkDisplay.innerHTML = '<a href="' + randomLink + '" target="_blank">' + randomLink + '</a>';
+                        // Disable the button after first click
+                        generateButton.disabled = true;
+                    }
+                };
+                xhr.open("GET", "get_random_link.php", true);
+                xhr.send();
+            });
+        });
+   </script>
