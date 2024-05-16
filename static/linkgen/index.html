@@ -53,54 +53,43 @@
         <div id="linkDisplay" class="link-display"></div>
     </div>
     <script>
-    document.addEventListener('DOMContentLoaded', function() {
-        const links = [
-            "aHR0cHM6Ly93d3cueW91dHViZS5jb20=",
-            "aHR0cHM6Ly93d3cueW91dHViZS5jb20=",
-            "aHR0cHM6Ly93d3cueW91dHViZS5jb20=",
-            "aHR0cHM6Ly93d3cueW91dHViZS5jb20=",
-            "aHR0cHM6Ly93d3cueW91dHViZS5jb20=",
-            "aHR0cHM6Ly93d3cueW91dHViZS5jb20=",
-            "aHR0cHM6Ly93d3cueW91dHViZS5jb20=",
-            "aHR0cHM6Ly93d3cueW91dHViZS5jb20=",
-            "aHR0cHM6Ly93d3cueW91dHViZS5jb20=",
-            "aHR0cHM6Ly93d3cueW91dHViZS5jb20=",
-            "aHR0cHM6Ly93d3cueW91dHViZS5jb20=",
-            "aHR0cHM6Ly93d3cueW91dHViZS5jb20=",
-            "aHR0cHM6Ly93d3cueW91dHViZS5jb20=",
-            "aHR0cHM6Ly93d3cueW91dHViZS5jb20=",
-            "aHR0cHM6Ly93d3cueW91dHViZS5jb20="
-        ];
+        document.addEventListener('DOMContentLoaded', function() {
+            const links = [
+                "https://eduschools.us.to",
+                "https://tire.my.to",
+                "https://thetireis.mine.bz",
+                "https://mydogatemytire.dogdammit.com",
+                "https://ifeelsafeat.home.kg",
+                "https://urmomstires.hec.to",
+                "https://ce.indiancoins.com",
+                "https://t.ub.uk.to",
+                "https://ihaveaim.bot.nu",
+                "https://iliketiresandmoms.69.mu",
+                "https://edutire.fr.to",
+                "https://edu-vita.evs.net.br",
+                "https://school22edu.us.to",
+                "https://collageedu.uk.to",
+                "https://toschools.us.to",
+                "https://tire-edu.lema.cl"
+            ];
 
-        const generateButton = document.getElementById('generateButton');
-        const linkDisplay = document.getElementById('linkDisplay');
+            const generateButton = document.getElementById('generateButton');
+            const linkDisplay = document.getElementById('linkDisplay');
 
-        generateButton.addEventListener('click', function() {
-            // Clear previous link
-            linkDisplay.innerHTML = '';
-            // Select a random link
-            const randomLink = links[Math.floor(Math.random() * links.length)];
-            // Apply decryption
-            const decryptedLink = decryptLink(randomLink);
-            // Create a new link element
-            const link = document.createElement('a');
-            link.href = decryptedLink;
-            link.textContent = decryptedLink;
-            link.target = '_blank'; // Open link in a new tab
-            // Display the new link
-            linkDisplay.appendChild(link);
-            // Disable the button after first click
-            generateButton.disabled = true;
+            generateButton.addEventListener('click', function() {
+                // Clear previous link
+                linkDisplay.innerHTML = '';
+                // Select a random link
+                const randomLink = links[Math.floor(Math.random() * links.length)];
+                // Create a new link element
+                const link = document.createElement('a');
+                link.href = randomLink;
+                link.textContent = randomLink;
+                link.target = '_blank'; // Open link in a new tab
+                // Display the new link
+                linkDisplay.appendChild(link);
+                // Disable the button after first click
+                generateButton.disabled = true;
+            });
         });
-
-        function decryptLink(link) {
-            const key = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789+/=";
-            let result = "";
-            for (let i = 0; i < link.length; i++) {
-                const charCode = key.indexOf(link.charAt(i)) - 5;
-                result += (charCode < 0) ? key.charAt(key.length + charCode) : key.charAt(charCode);
-            }
-            return atob(result);
-        }
-    });
-</script>
+    </script>
