@@ -16,12 +16,6 @@ app.use(express.urlencoded({ extended: true }));
 app.use(cors());
 app.use(express.static(path.join(__dirname, 'static')));
 
-// Middleware for loading screen
-app.use((req, res, next) => {
-  res.sendFile(path.join(__dirname, 'static', 'loading.html')); // Display loading screen
-  next(); // Continue to next middleware/route
-});
-
 // Route to handle 404 errors
 app.use((req, res, next) => {
   res.status(404).sendFile(path.join(__dirname, 'static', '404.html'));
