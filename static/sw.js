@@ -1,4 +1,4 @@
-var cacheName = 'TIWcog';
+var cacheName = 'TireUnblocker';
 var filesToCache = [
   '/js/sw.js'
 ];
