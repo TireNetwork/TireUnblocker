@@ -1,4 +1,5 @@
-<meta charset="UTF-8">
+
+    <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=0.9">
     <meta name="description" content="TireUnblocker can help you get through internet filters and bypass them to search the web privately. Enjoy features such as Advanced Tab Cloaking, Advanced About:Blank Cloaking (prevents sites from showing in browser history), an extremely clean UI, fast speeds and response times, and access to tons of apps and games.">
     <meta name="keywords" content="TireUnblocker, internet filters, bypass filters, web privacy, tab cloaking, clean UI, fast speeds, apps, games">
@@ -7,21 +8,21 @@
     <meta property="og:description" content="TireUnblocker can help you get through internet filters and bypass them to search the web privately. Enjoy features such as Advanced Tab Cloaking, Advanced About:Blank Cloaking (prevents sites from showing in browser history), an extremely clean UI, fast speeds and response times, and access to tons of apps and games.">
     <meta property="og:image" content="https://tire-unblocker.vercel.app/img/UB.png">
     <meta property="og:url" content="https://tire-unblocker.vercel.app">
-  
     <meta name="twitter:title" content="TireUnblocker">
-    <meta name="twitter:description" content="TireUnblocker can help you get through internet filters and bypass them to search the web privately. Enjoy features such as Advanced Tab Cloaking, Advanced About:Blank Cloaking (prevents sites from showing in browser history), an extremely clean UI, fast speeds and response times, and access to tons of apps and games."><link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Archivo+Black&display=swap" rel="stylesheet">
+    <meta name="twitter:description" content="TireUnblocker can help you get through internet filters and bypass them to search the web privately. Enjoy features such as Advanced Tab Cloaking, Advanced About:Blank Cloaking (prevents sites from showing in browser history), an extremely clean UI, fast speeds and response times, and access to tons of apps and games.">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Archivo+Black&display=swap" rel="stylesheet">
 
     <style>
         /* Styling for the moving text bar */
         .moving-bar {
-            
             color: grey;
-            padding: 10px 0;ng
+            padding: 10px 0;
             overflow: hidden;
             position: relative;
-            font-family: arial;
+            font-family: Arial, sans-serif;
             height: 10px;
         }
 
@@ -33,7 +34,7 @@
             width: 100%;
             height: 100%;
             animation: moveText 15s linear infinite;
-            font-family: arial;
+            font-family: Arial, sans-serif;
             padding: 5px;
         }
 
@@ -46,120 +47,119 @@
                 left: 100%;
             }
         }
-    </style><div class="moving-bar">
+
+        body, html {
+            height: 100%;
+            margin: 0;
+            overflow: hidden;
+        }
+
+        #container {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            z-index: -1;
+        }
+
+        canvas {
+            display: block;
+        }
+
+        .title {
+            text-align: center;
+        }
+
+        h1 {
+            text-align: center;
+            position: relative;
+            top: 170px; /* Adjusted from 190px */
+            color: grey; 
+            font-family: "Archivo Black", sans-serif;
+            font-weight: 400;
+            font-style: normal;
+            font-size: 70px;
+        }
+
+        h3 {
+            text-align: center;
+            position: relative;
+            top: 150px; /* Adjusted from 190px */
+            color: grey; 
+            font-family: "Archivo Black", sans-serif;
+            font-weight: 400;
+            font-style: normal;
+        }
+
+        #daform {
+            text-align: center;
+            width: 700px;
+            margin: 130px auto 0; /* Adjusted from 170px */
+        }
+
+        .form__input {
+            text-align: center;
+            border-radius: 18px;
+            outline: none;
+            background: transparent;
+            border: 2px solid white;
+            color: grey;
+            width: 600px;
+            height: 50px;
+            margin-top: 10px;
+        }
+
+        .desc {
+            margin-left: auto;
+            margin-right: auto;
+            width: 80%;
+            text-align: center;
+        }
+
+        .iframe1 {
+            border: none;
+        }
+
+        .x {
+            position: absolute;
+            width: 70px;
+            height: 70px;
+            top: 0px;
+            right: 0px;
+        }
+
+        .searchbox {
+            width: 47%;
+            height: 7%;
+            color: #FFFFFF;
+            position: absolute;
+            left: 20%;
+            top: 50%;
+        }
+    </style>
+
+    <title>Tire-UB</title>
+    <div id="container"></div>
+    <div class="moving-bar">
         <div class="moving-text">Updates: New tomphttp node bare server and also nonstatic im also taking a break also new 404 page</div>
     </div>
-    <style>
-		body, html {
-		    height: 100%;
-		    margin: 0;
-		overflow:hidden;
-		}
-		#container {
-		    position: fixed;
-		    top: 0;
-		    left: 0;
-		    width: 100%;
-		    height: 100%;
-		    z-index: -1;
-		}
-		canvas {
-		    display: block;
-		}
-	</style>
-	<div id="container"></div>
 
-	<script src="/uv/uv.bundle.js" defer></script>
-	<script src="/uv/uv.config.js" defer></script>
-	<script src="/register-sw.js" defer></script>
-	<script src="/search.js" defer></script>
-	<script src="index.js" defer></script>
-	<script src="/error.js" defer></script>
+    <div class="title">
+        <h1 id="title1">TireUnblocker</h1>
+        <h3 placeholder="A proxy used to search the web privately" id="haha"></h3>
+        <br>
+    </div>
 
-	<div class="title" align="center" style="text-align: center;">
-	    <h1 id="title1">TireUnblocker</h1>
-	<h3 placeholder="A proxy used to search the web privately" id="haha"></h3>
-		<br>
-	</div>
-	<title>Tire-UB</title>
-
-<form id="daform" style="text-align: center; width: 700px; margin: 170px auto 0;">
+    <form id="daform">
         <input id="dasearchengine" value="https://www.google.com/search?q=%s" type="hidden"/> 
-        <input id="daaddress" type="text" placeholder="Search Google query or type an URL" class="form__input" style="width: 100%; padding: 10px; margin-top: 10px; text-align: center;
-    border-radius: 18px;
-    outline:none;
-    border-radius: 18px;
-    background:transparent;
-    border: 2px solid white;
-    color: grey;
-    width: 600px;
-    height:50px;"/>
+        <input id="daaddress" type="text" placeholder="Search Google query or type an URL" class="form__input"/>
     </form>
-	<div class="desc left-margin" style="margin-left: auto; margin-right: auto; width: 80%; text-align: center;">
-	    <p id="uv-error"></p>
-	    <pre id="uv-error-code"></pre>
-	</div>
 
-	<style>
-	    .iframe1{
-	    border: none;
-	    }
-	     .x{
-	    position: absolute;
-	    width:70px;
-	    height:70px;
-	    top:0px;
-	    right:0px;
-	    }
-
-	      .searchbox{
-	    width:47%;
-	    height:7%;
-	    color: #FFFFFF;
-	    position: absolute;
-	    left: 20%;
-	    top:50%;
-	    margin: 
-	    }
-
-	    .form__input {
-	text-align: center;
-	    border-radius: 18px;
-	    outline:none;
-	    border-radius: 18px;
-	    background:transparent;
-	    border: 2px solid white;
-	    color: grey;
-	    width: 600px;
-	    height:50px;
-	  bottom: 0px;
-	  top: 128px;
-	}
-	</style>
-
-
-	   <style>
-	 @import url('https://fonts.googleapis.com/css2?family=Micro+5+Charted&display=swap');
-	        h1 {
-	          text-align: center;
-	            position: relative;
-	            top: 190px;
-	            color: grey; 
-		    font-family: "Archivo Black", sans-serif;
-                    font-weight: 400;
-                    font-style: normal; /* Arial font */
-	             font-size: 70px; /* Adjust font size as needed */ f
-	        }
-		   h3 {
-			     text-align: center;
-	            position: relative;
-	            top: 190px;
-	            color: grey; 
-		    font-family: "Archivo Black", sans-serif;
-                    font-weight: 400;
-                    font-style: normal; /* Arial font */
-	        }
-	    </style>
+    <div class="desc">
+        <p id="uv-error"></p>
+        <pre id="uv-error-code"></pre>
+    </div>
 
 	<canvas id="cosmicBackground" style="position: absolute; top: 0; left: 0; z-index: -2;"></canvas>
 
