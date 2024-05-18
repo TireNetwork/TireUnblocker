@@ -22,6 +22,17 @@ const errorCode = document.getElementById("uv-error-code");
 
 form.addEventListener("submit", async (event) => {
   event.preventDefault();
+  var loading = document.createElement('img');
+            loading.style.cursor="pointer";
+            loading.style.width = "125px";
+            loading.style.height = "125px";
+            loading.style.position="absolute";
+            loading.style.zIndex="101"; 
+            loading.src = "/img/load.gif";
+            loading.style.top="50%";
+            loading.style.left="50%";
+            loading.style.transform="translate(-50%, -50%)";
+            document.body.appendChild(loading);
 
   try {
     await registerSW();
