@@ -130,6 +130,7 @@
             <li class="nav-item"><a onclick="home();">Home</a></li>
             <li class="nav-item"><a onclick="games();">Games</a></li>
             <li class="nav-item"><a onclick="apps();">Apps</a></li>
+            <li class="nav-item"><a onclick="chat();">Chat</a></li>
             <li class="nav-item"><a onclick="mv();">Movies</a></li>
             <li class="nav-item"><a onclick="music();">TireMusic</a></li>
             <li class="nav-item"><a onclick="ab();">about:blank</a></li>
@@ -160,7 +161,9 @@
     function lg() {
         frame.src = "linkgen";
     }
-
+function chat() {
+        frame.src = "https://tiremusic.audiopro.mx";
+    }
     function ab() {
         var win = window.open('about:blank');
         win.document.title = "Classes";
