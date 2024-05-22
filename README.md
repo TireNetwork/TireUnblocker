@@ -29,4 +29,3 @@
 ## Discord Servers
 
 ![Join us on Discord](https://invidget.switchblade.xyz/dmnet?theme=dark)
-![Join us on Discord](https://invidget.switchblade.xyz/YhMYySCZ?theme=dark)
