@@ -20,12 +20,13 @@
     <link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png">
     <link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png">
     <link rel="manifest" href="site.webmanifest">
-      <script src="uv/uv.bundle.js" defer></script>
-      <script src="uv/uv.config.js" defer></script>
-      <script src="register-sw.js" defer></script>
-      <script src="search.js" defer></script>
-      <script src="index.js" defer></script>
-      <script src="error.js" defer></script>
+<script src="/uv/uv.bundle.js" defer></script>
+<script src="/uv/uv.config.js" defer></script>
+<script src="/register-sw.js" defer></script>
+<script src="/search.js" defer></script>
+<script src="index.js" defer></script>
+<script src="/error.js" defer></script>
+<!-- Google tag (gtag.js) -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-QDSM46GQ19"></script>
 <script>
   window.dataLayer = window.dataLayer || [];
@@ -129,15 +130,14 @@
             <li class="nav-item"><a onclick="home();">Home</a></li>
             <li class="nav-item"><a onclick="games();">Games</a></li>
             <li class="nav-item"><a onclick="apps();">Apps</a></li>
-            <li class="nav-item"><a onclick="chat();">Chat</a></li>
             <li class="nav-item"><a onclick="mv();">Movies</a></li>
             <li class="nav-item"><a onclick="music();">TireMusic</a></li>
             <li class="nav-item"><a onclick="ab();">about:blank</a></li>
             <li class="nav-item"><a onclick="lg();">Link Generator</a></li>
           <li class="nav-item">
-  <form style="text-align: center; width: -200px; margin: 200px auto 0;">
-   <input class="search-input" type="text" placeholder="Search Google or type an URL" class="search-input" style="width: 80%; padding: 10px; margin-top: 10px; text-align: center; border-radius: 18px; outline:none; border-radius: 18px; background:transparent; border: 2px solid white; color: grey;">   
-  </form>
+  <form id="daform" style="text-align: center; width: -200px; margin: 200px auto 0;">
+    <input id="dasearchengine" value="https://www.google.com/search?q=%s" type="hidden"/> 
+           <input id="daaddress" type="text" placeholder="Search Google or type an URL" class="form__input" style="width: 80%; padding: 10px; margin-top: 10px; text-align: center; border-radius: 18px; outline:none; border-radius: 18px; background:transparent; border: 2px solid white; color: grey;"/></form>
 </li>
         </ul>
     </div>
@@ -160,9 +160,7 @@
     function lg() {
         frame.src = "linkgen";
     }
-function chat() {
-        frame.src = "/service/hvtrs8%2F-dgafskmrlgcjav.aoo%2F%60S%3AcsyPNuc";
-    }
+
     function ab() {
         var win = window.open('about:blank');
         win.document.title = "Classes";
