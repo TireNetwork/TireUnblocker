@@ -92,9 +92,11 @@
             font-style: normal;
         }
 
+        #daform {
+           
+        }
 
-
-input {
+        input {
             text-align: center;
             border-radius: 18px;
             outline: none;
@@ -104,7 +106,7 @@ input {
             width: 600px;
             height: 50px;
             margin-top: 10px;
-	  text-align: center;
+		 text-align: center;
             width: 700px;
             margin: 130px auto 0; /* Adjusted from 170px */
         }
@@ -154,12 +156,12 @@ input {
         <h3 placeholder="A proxy used to search the web privately" id="haha"></h3>
         <br>
     </div>
+<center>
+    <form>
+        <input class="search-input" placeholder="Search the web freely...">
 
-    <form id="daform">
-        <input id="dasearchengine" value="https://www.google.com/search?q=%s" type="hidden"/> 
-        <input id="daaddress" type="text" placeholder="Search Google or type an URL" class="form__input"/>
     </form>
-
+</center>
     <div class="desc">
         <p id="uv-error"></p>
         <pre id="uv-error-code"></pre>
