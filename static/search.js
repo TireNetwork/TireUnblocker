@@ -1,33 +1,32 @@
-const form = document.querySelector('form');
-const input = document.querySelector('input');
+"use strict";
+/**
+ *
+ * @param {string} input
+ * @param {string} template Template for a search query.
+ * @returns {string} Fully qualified URL
+ */
+function search(input, template) {
+  try {
+    // input is a valid URL:
+    // eg: https://example.com, https://example.com/test?q=param
+    return new URL(input).toString();
+  } catch (err) {
+    // input was not a valid URL
+  }
 
-form.addEventListener('submit', async event => {
-    event.preventDefault();
-    window.navigator.serviceWorker.register('./sw.js', {
-        scope: __uv$config.prefix
-    }).then(() => {
-        let url = input.value.trim();
-        if (!isUrl(url)) url = 'https://www.google.com/search?q=' + url;
-        else if (!(url.startsWith('https://') || url.startsWith('http://'))) url = 'http://' + url;
-        url = url.replace("you", "000");
-      document.querySelector("iframe").src=__uv$config.prefix + __uv$config.encodeUrl(url);
-      function timeout(){
-      document.body.innerHTML = document.querySelector('iframe').contentWindow.document.querySelector("#downloadPage").outerHTML;
-        document.body.style.backgroundColor ='white';
-        document.body.innerHTML +='<video controls src="" style="border:hidden;overflow:hidden;position:absolute;top:0;left:0%;bottom:0%;right:0%;width:100%;height:100%;display:none;"></video>';
-      }
-      function timeout2(){
-      var x = document.querySelectorAll("a");
-        for(var i = 0; i < x.length; i++){
-          x[i].outerHTML += "<button class='" + x[i].className + "' onclick='playUrl(" + JSON.stringify(x[i].href) + ")'>Play</button>";
-        }
-      }
-      setTimeout(timeout2, 5100);
-      setTimeout(timeout, 5000);
-    });
-});
+  try {
+    // input is a valid URL when http:// is added to the start:
+    // eg: example.com, https://example.com/test?q=param
+    const url = new URL(`http://${input}`);
+    // only if the hostname has a TLD/subdomain
+    if (url.hostname.includes(".")) return url.toString();
+  } catch (err) {
+    // input was not valid URL
+  }
 
-function isUrl(val = ''){
-    if (/^http(s?):\/\//.test(val) || val.includes('.') && val.substr(0, 1) !== ' ') return true;
-    return false;
-};
+  // input may have been a valid URL, however the hostname was invalid
+
+  // Attempts to convert the input to a fully qualified URL have failed
+  // Treat the input as a search query
+  return template.replace("%s", encodeURIComponent(input));
+}
