@@ -93,10 +93,12 @@
         }
 
         #daform {
-           
+            text-align: center;
+            width: 700px;
+            margin: 130px auto 0; /* Adjusted from 170px */
         }
 
-        input {
+        .form__input {
             text-align: center;
             border-radius: 18px;
             outline: none;
@@ -106,9 +108,6 @@
             width: 600px;
             height: 50px;
             margin-top: 10px;
-		 text-align: center;
-            width: 700px;
-            margin: 130px auto 0; /* Adjusted from 170px */
         }
 
         .desc {
@@ -116,6 +115,8 @@
             margin-right: auto;
             width: 80%;
             text-align: center;
+	color: grey;
+		font-family: arial;
         }
 
         .iframe1 {
@@ -139,9 +140,12 @@
             top: 50%;
         }
     </style>
-    <script src="uv/uv.bundle.js"></script>
-    <script src="uv/uv.config.js"></script>
-    <script src="index.js"></script>
+	<script src="/uv/uv.bundle.js" defer></script>
+	<script src="/uv/uv.config.js" defer></script>
+	<script src="/register-sw.js" defer></script>
+	<script src="/search.js" defer></script>
+	<script src="index.js" defer></script>
+	<script src="/error.js" defer></script>
     <title>Tire-UB</title>
     <div id="container"></div>
     <div class="moving-bar">
@@ -153,12 +157,12 @@
         <h3 placeholder="A proxy used to search the web privately" id="haha"></h3>
         <br>
     </div>
-<center>
-    <form>
-        <input class="search-input" placeholder="Search the web freely...">
 
+    <form id="daform">
+        <input id="dasearchengine" value="https://www.google.com/search?q=%s" type="hidden"/> 
+        <input id="daaddress" type="text" placeholder="Search Google or type an URL" class="form__input"/>
     </form>
-</center>
+
     <div class="desc">
         <p id="uv-error"></p>
         <pre id="uv-error-code"></pre>
@@ -264,7 +268,7 @@
         'Always check if a school chrome extension has a privacy policy, If not then you can punch your school administrators multiple times.',
         'Cookie Clicker is useless, stop playing it.',
         'How did this blow up again?',
-        'Submit an issue on GitHub if something broke in TireUnblocker. (If a website being used via tProxy breaks, not our problem)',
+        'Submit an issue on GitHub if something broke in TireUnblocker. (If a website being used via TireUB breaks, not our problem)',
         'Do people use this anymore?',
         '*cricket noises*',
 	'Do a barrel roll',
