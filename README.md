@@ -8,7 +8,6 @@
 <a align="center" href="" alt="Made with NodeJS"><img align="center" src="https://img.shields.io/badge/Made%20with-Node.JS-6DA55F?style=for-the-badge&logo=node.js&logoColor=white"></a> 
 <a align="center" href="https://github.com/wheels522/TireUnblocker/issues/" alt="GitHub issues"><img align="center" src="https://img.shields.io/github/issues/wheels522/TireUnblocker?style=for-the-badge"></a>
 <a align="center" href="https://github.com/wheels522/TireUnblocker/graphs/contributors/" alt=""><img align="center" src="https://img.shields.io/github/contributors/TireNetwork/TireUnblocker?style=for-the-badge"></a>
-<img src="http://ForTheBadge.com/images/badges/made-with-html.svg" />
 </div>
 
 ## Features:
