@@ -28,5 +28,5 @@
 
 ## Discord Servers
 
-[![Join us on Discord](https://invidget.switchblade.xyz/dmnet?theme=dark)](https://discord.gg/dmnet)
+[![Join us on Discord](https://invidget.switchblade.xyz/kewl?theme=dark)](https://discord.gg/kewl)
 <p>coming soon....</p>
