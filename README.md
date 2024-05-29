@@ -37,3 +37,6 @@
 
 [![Join us on Discord](https://invidget.switchblade.xyz/kewl?theme=dark)](https://discord.gg/kewl)
 <p>coming soon....</p>
+
+## Discord bot
+[Click here for discord bot](https://discord.com/oauth2/authorize?client_id=1236164379356168272&permissions=8&scope=bot)
